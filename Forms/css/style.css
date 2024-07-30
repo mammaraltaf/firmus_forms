@@ -1,0 +1,271 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6,p{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+p, label{
+	font-size: 15px;
+	color: #000;
+}
+.wrapper{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+.mt-16{
+	margin-top: 16px;
+}
+.px-0{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.m-0{
+	margin: 0 !important;
+}
+.top-logo{
+	padding: 25px 0 11px 0;
+	text-align: center;
+}
+.top-logo img{
+	width: 250px;
+}
+.pdf-type-text{
+	background-color: #348ccb;
+	text-align: center;
+	padding: 5px 0 5px 0;
+}
+.pdf-type-text h6{
+	font-size: 17px;
+	color: #fff;
+}
+.pdf-type-subtext{
+	font-size: 17px;
+	color: #fff;
+	background-color: #8ab5e1;
+	padding: 5px 0 5px 16px;
+}
+.pdf-type-subtext p{
+	font-size: 15px;
+	color: #fff;
+	font-style: italic;
+}
+.d-flex{
+	display: flex;
+}
+.align-items-center{
+	align-items: center;
+}
+.align-items-end{
+	align-items: flex-end;
+}
+.pdf-type-subtext p b{
+	font-style: normal;
+}
+.flex-5{
+	flex: 0 0 5%;
+}
+.flex-10{
+	flex: 0 0 10%;
+}
+.flex-20{
+	flex: 0 0 20%;
+}
+.flex-25{
+	flex: 0 0 25%;
+}
+.flex-30{
+	flex: 0 0 30%;
+}
+.flex-33{
+	flex: 0 0 33%;
+}
+.flex-40{
+	flex: 0 0 40%;
+}
+.flex-50{
+	flex: 0 0 50%;
+}
+.flex-60{
+	flex: 0 0 60%;
+}
+.flex-70{
+	flex: 0 0 70%;
+}
+.flex-80{
+	flex: 0 0 80%;
+}
+.flex-90{
+	flex: 0 0 90%;
+}
+.flex-100{
+	flex: 0 0 100%;
+}
+.grayed-fields{
+	padding: 16px;
+	background-color: #f1f1f1;
+}
+.single-field{
+	display: flex;
+	gap: 6px;
+	flex-direction: column;
+}
+.fields-block-wrapper{
+	padding: 16px;
+}
+.single-field p{
+	font-size: 15px;
+	color: #000;
+	flex: 0 0 auto;
+}
+input[type=checkbox] {
+	position: relative;
+	border: 2px solid #666;
+	border-radius: 2px;
+	background: none;
+	cursor: pointer;
+	line-height: 0;
+	margin: 0 .6em 0 0;
+	outline: 0;
+	padding: 0 !important;
+	vertical-align: text-top;
+	height: 20px;
+	width: 20px;
+	-webkit-appearance: none;
+	opacity: .5;
+}
+  
+input[type=checkbox]:hover {
+	opacity: 1;
+}
+  
+input[type=checkbox]:checked {
+	background-color: #348ccb;
+	opacity: 1;
+	border-color: #348ccb;
+}
+
+input[type=checkbox]:before {
+	content: '';
+	position: absolute;
+	right: 50%;
+	top: 50%;
+	width: 4px;
+	height: 10px;
+	border: solid #FFF;
+	border-width: 0 2px 2px 0;
+	margin: -1px -1px 0 -1px;
+	transform: rotate(45deg) translate(-50%, -50%);
+	z-index: 2;
+}
+.checkbox-block{
+	display: flex;
+	gap: 9px;
+	align-items: center;
+}
+.vertical-form-field{
+	display: flex;
+	flex-direction: column;
+	padding: 0 5px;
+}
+.checkboxes-group{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	margin-top: 16px;
+}
+.vertical-form-field small{
+	color: #999;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.form-control{
+	border: none;
+	border-bottom: 1px solid #333;
+	background-color: transparent;
+	font-size: 15px;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	color: #666;
+	width: 100%;
+}
+.form-control:focus{
+	box-shadow: none;
+	outline: none;
+	border-color: #348ccb;
+}
+.horizontal-form-field{
+	display: flex;
+	align-items: flex-end;
+	gap: 5px;
+	padding: 0 5px;
+}
+.border{
+	height: 5px;
+	background-color: #000;
+	display: block;
+	content: '';
+	width: 100%;
+}
+.pdf-address{
+	text-align: center;
+	padding: 10px 0;
+}
+.pdf-address h6{
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+}
+.pdf-address ul {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+	gap: 20px;
+}
+.pdf-address ul li a{
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+	list-style-type: none;
+	text-decoration: none;
+}
+.pdf-address p{
+	font-size: 16px;
+	color: #000;
+}
+.gray-paragraph{
+	font-size: 15px;
+	color: #000;
+	padding: 16px;
+	background-color: #f0f0ef;
+}
+.tc-row{
+	padding: 10px 0;
+}
+.tabled-checkboxes-rows .d-flex:nth-of-type(odd) .tc-row{
+	background-color: #f0f0ef;
+}
+.tabled-checkboxes-rows .tc-row p{
+	padding: 0 10px;
+}
+.signature{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.signature-block{
+	height: 100px;
+	width: 98%;
+	background-color: #f6f6f6;
+	border: 1px solid #ddd;
+}
+.signature-block p{
+	font-size: 15px;
+	color: #000;
+	font-weight: bold;
+}

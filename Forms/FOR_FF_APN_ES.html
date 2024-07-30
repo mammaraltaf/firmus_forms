@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <title>Firmus Financial Inc.</title>
+  </head>
+  <body>
+    <form name="form1" method="POST" action="ajout.php">
+	<section class="wrapper">
+      <div class="top-logo">
+        <img src="images/logo.svg" alt="Firmus Financial" class="img-fluid" />
+      </div>
+      <div class="pdf-type-text">
+        <h6>Apertura de Cuenta Persona Natural</h6>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Datos Generales</b> Completar todos los campos de este formulario, de no aplicar colocar N/A</p>
+      </div>
+      <div class="grayed-fields d-flex">
+        <div class="single-field flex-20">
+          <p>Tipo de Cuenta o Contrato:</p>
+          <p>Parte Relacionada:</p>
+        </div>
+        <div class="single-field flex-20">
+          <div class="checkbox-block">
+            <input name="contract_type" type="radio" id="no-discrecional">
+            <label for="no-discrecional">No Discrecional</label>
+          </div>
+          <div class="checkbox-block">
+            <input name="Part_Rel" type="radio" id="si">
+            <label for="si">Si</label>
+          </div>
+        </div>
+        <div class="single-field flex-20">
+          <div class="checkbox-block">
+            <input name="contract_type" type="radio" id="discrecional">
+            <label for="discrecional">Discrecional</label>
+          </div>
+          <div class="checkbox-block">
+            <input name="Part_Rel" type="radio" id="no">
+            <label for="no">No</label>
+          </div>
+        </div>
+        <div class="single-field flex-40">
+          <div class="vertical-form-field">
+            <p>Explique por qué se considera parte relacionada:</p>
+            <input name="Part_Rel_Raison" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-25">
+            <div class="vertical-form-field">
+              <p>Nombre(s):</p>
+              <input name="E_name" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-25">
+            <div class="vertical-form-field">
+              <p>Apellido(s):</p>
+              <input name="E_surname"type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-25">
+            <div class="vertical-form-field">
+              <p>ANacionalidad:</p>
+              <input name ="E_Country" type= "text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-25">
+            <div class="vertical-form-field">
+              <p>Estado Civil:</p>
+              <input name ="E_C_Status" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Tipo de Documento (ID):</p>
+              <input name="E_ID_type" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>No. de Documento (ID):</p>
+              <input name ="E_ID_No" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Vencimiento (ID):</p>
+              <input name="E_ID_Expire_Date"type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Nacimiento:</p>
+              <input "E_Birth_Date"type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Lugar de Nacimiento:</p>
+              <input name="E_Birth_Place" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-60">
+            <div class="vertical-form-field">
+              <p>Correo Electrónico:</p>
+              <input name="E_Email" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Profesión u Oficio:</p>
+              <input name="E_Profession" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Ocupación Actual:</p>
+              <input name="E_Profession_Current" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Personal:</p>
+              <input name="E_Home_Adress" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Domicilio / Casa:</p>
+              <input name="E_Home_Adress_Number" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input "E_Home_Postal_Adress"type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax:</p>
+              <input name="E_Home_Fax" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Laboral:</p>
+              <input name="E_Office_Adress" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Oficina:</p>
+              <input name="E_Office_Number" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input name="E_Office_Postal_Adress" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax:</p>
+              <input name="E_Office_Fax"type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Empleado con Salario:</p>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input "E_Salary_Independ" type="checkbox" id="Independiente">
+                <label for="Independiente">Independiente</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input name="E_Salary_NotRetired" type=checkbox" id="Jubilado">
+                <label for="Jubilado">No Jubilado</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input name="E_Salary_NotPensioned" type="checkbox" id="Pensionado">
+                <label for="Pensionado">No Pensionado</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16 align-items-center">
+          <div class="checkboxes-group flex-40">
+            <div class="checkbox-block">
+              <input name="E_Salary_Fixed" type="checkbox" id="fijo">
+              <label for="fijo">Fijo</label>
+            </div>
+            <div class="checkbox-block">
+              <input name="E_Salary_Variable" type="checkbox" id="Variable">
+              <label for="Variable">No Variable</label>
+            </div>
+          </div>
+          <div class="single-field flex-60">
+            <div class="horizontal-form-field">
+              <p>Otro:</p>
+              <input name="E_Salary_Other" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Origen de Fondos</b></p>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-20">
+            <p>Jurisdicciones principales de donde recibe/envía:</p>
+          </div>
+          
+        </div>
+        <div class="d-flex mt-16 align-items-end">
+          <div class="single-field flex-20">
+            <div class="horizontal-form-field">
+              <p>1-</p>
+              <input name="Funds_Source1" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input name="Funds_Source1_Type_Receive_Cash" type="checkbox" id="Recibe-su-Efectivo">
+              <label for="Recibe-su-Efectivo">Recibe su Efectivo</label>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input name=" Funds_Source1_Type_Send_Cash"  type="checkbox" id="Envía-su-Efectivo">
+              <label for="Envía-su-Efectivo">Envía su Efectivo</label>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input name="Funds_Source1_Type_Receive_Titles"  type="checkbox" id="Recibe-sus-Títulos">
+              <label for="Recibe-sus-Títulos">Recibe sus Títulos</label>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input  name="Funds_Source1_Type_Submit_Titles" type="checkbox" id="Envía-sus-Títulos">
+              <label for="Envía-sus-Títulos">Envía sus Títulos</label>
+            </div>
+          </div>
+          
+        </div>
+        <div class="d-flex mt-16 align-items-end">
+          <div class="single-field flex-20">
+            <div class="horizontal-form-field">
+              <p>2-</p>
+              <input name="Funds_Source2" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input name="Funds_Source2_Type_Receive_Cash" type="checkbox" id="Recibe-su-Efectivo2">
+              <label for="Recibe-su-Efectivo2">Recibe su Efectivo</label>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input name="Funds_Source2_Type_Send_Cash" type="checkbox" id="Envía-su-Efectivo2">
+              <label for="Envía-su-Efectivo2">Envía su Efectivo</label>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input name="Funds_Source2_Type_Receive_Titles" type="checkbox" id="Recibe-sus-Títulos2">
+              <label for="Recibe-sus-Títulos2">Recibe sus Títulos</label>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkbox-block">
+              <input name="Funds_Source2_Type_Submit_Titles" type="checkbox" id="Envía-sus-Títulos2">
+              <label for="Envía-sus-Títulos2">Envía sus Títulos</label>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Fuente de los Recursos o Patrimonio</b></p>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-60">
+            <div class="horizontal-form-field">
+              <p>Nombre del Empleador / Independiente:</p>
+              <input name="RS_Employer_name" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Ingreso Anual: (USD):</p>
+              <input name="RS_Annual_Income_USD" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16 align-items-center">
+          <div class="single-field flex-30">
+            <div class="horizontal-form-field">
+              <p>Salario Anual: (USD):</p>
+              <input name="RS_Annual_Salary_USD" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="horizontal-form-field">
+              <p>Años en la Empresa:</p>
+              <input name="RS_Years_in_Company" type="text" class="form-control">
+              <p>Actividad:</p>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">
+                <input name="RS_Activity_Professional_fees" type="checkbox" id="Honorarios-Profesionales">
+                <label for="Honorarios-Profesionales">Honorarios Profesionales</label>
+              </div>
+              <div class="checkbox-block">
+                <input name="RS_Activity_Own_business"  type="checkbox" id="Negocio-Propio">
+                <label for="Negocio-Propio">Negocio Propio</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16 align-items-center">
+          <div class="single-field flex-40">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">
+                <input name="RS_Activity_Saving" type="checkbox" id="Ahorro">
+                <label for="Ahorro">Ahorro</label>
+              </div>
+              <div class="checkbox-block">
+                <input name="RS_Activity_Pension" type="checkbox" id="Pensión">
+                <label for="Pensión">Pensión</label>
+              </div>
+              <div class="checkbox-block">
+                <input name="RS_Activity_Pension1" type="checkbox" id="Salario">
+                <label for="Salario">Salario</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Dividendos de Inversión:</p>
+              <input name="RS_Investment_Dividends"  type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="horizontal-form-field">
+              <p>Otros:</p>
+              <input name="RS_Others" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-100">
+           <p><b>Referencia Bancaria</b></p>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <p>Nombre de la Institución:</p>
+          </div>
+          <div class="single-field flex-20">
+            <p>País</p>
+          </div>
+          <div class="single-field flex-20">
+            <p>Persona Contacto:</p>
+          </div>
+          <div class="single-field flex-20">
+            <p>Teléfono:</p>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>1-</p>
+              <input name="Bank1_Ref_Name"  type="text" class="form-control">
+            </div>
+            <div class="horizontal-form-field">
+              <p>2-</p>
+              <input  name="Bank2_Ref_Name" type="text" class="form-control">
+            </div>
+            <div class="horizontal-form-field">
+              <p>3-</p>
+              <input name="Bank3_Ref_Name" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <input name="Bank1_Ref_Country" type="text" class="form-control">
+            </div>
+            <div class="vertical-form-field">
+              <input name="Bank2_Ref_Country" type="text" class="form-control">
+            </div>
+            <div class="vertical-form-field">
+              <input name="Bank3_Ref_Country" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <input name="Bank1_Ref_Contact" type="text" class="form-control">
+            </div>
+            <div class="vertical-form-field">
+              <input name="Bank2_Ref_Contact" type="text" class="form-control">
+            </div>
+            <div class="vertical-form-field">
+              <input name="Bank3_Ref_Contact" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <input name="Bank1_Ref_Phone" type="text" class="form-control">
+            </div>
+            <div class="vertical-form-field">
+              <input name="Bank2_Ref_Phone" type="text" class="form-control">
+            </div>
+            <div class="vertical-form-field">
+              <input name="Bank3_Ref_Phone" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Depósito Inicial</b></p>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-40">
+            <p>Usted estará depositando o transfiriendo: </p>
+            <div class="checkboxes-group flex-40">
+              <div class="checkbox-block">
+                <input name="Initial_Deposit_Cash"  type="checkbox" id="Efectivo">
+                <label for="Efectivo">Efectivo</label>
+              </div>
+              <div class="checkbox-block">
+                <input name="Initial_Deposit_Non_Securities"  type="checkbox" id="Títulos-Valores">
+                <label for="Títulos-Valores">No Títulos Valores</label>
+              </div>
+              <div class="checkbox-block">
+                <input name="Initial_Deposit_Both" type="checkbox" id="Ambos">
+                <label for="Ambos">Ambos</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <p>Indique el Monto (USD):</p>
+            <div class="horizontal-form-field">
+              <p>Efectivo</p>
+              <input name="Initial_Deposit_USD" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <p>&nbsp;</p>
+            <div class="horizontal-form-field">
+              <p>Títulos Valores:</p>
+              <input name="Initial_Deposit_Securities" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-70">
+            <p>Institución de donde Provienen los Fondos:</p>
+          </div>
+          <div class="single-field flex-30">
+            <p>Tiempo de Relación con la Institución:</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="single-field flex-50">
+            <div class="horizontal-form-field">
+              <p>1-</p>
+              <input name="Initial_Deposit_From" type="text" class="form-control">
+            </div>
+            <div class="horizontal-form-field">
+              <p>2-</p>
+              <input name="" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">
+                <input name="Initial_Deposit_From_Cash" type="checkbox" id="Efectivo">
+                <label for="Efectivo">Efectivo</label>
+              </div>
+              <div class="checkbox-block">
+                <input name="Initial_Deposit_From_Securities" type="checkbox" id="Títulos">
+                <label for="Títulos">Títulos</label>
+              </div>
+            </div>
+            <div class="checkboxes-group">
+              <div class="checkbox-block">
+                <input name="Initial_Deposit_Both" type="checkbox" id="Efectivo3">
+                <label for="Efectivo3">Efectivo</label>
+              </div>
+              <div class="checkbox-block">
+                <input name="" type="checkbox" id="Títulos3">
+                <label for="Títulos3">Títulos</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <input name="" type="text" class="form-control">
+            </div>
+            <div class="vertical-form-field">
+              <input name="" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Persona Políticamente Expuesta</b></p>
+      </div>
+      <div class="gray-paragraph">
+        <p>El cliente debe indicar expresamente si es Persona Políticamente Expuesta (PEP). Persona Políticamente Expuesta incluye, entre otros, una persona
+        que desempeña o ha desempeñado funciones públicas prominentes dentro o fuera del país, tales como jefes de Estado o de Gobierno, políticos de alto
+        nivel, funcionarios gubernamentales, judiciales u oficiales militares de alto nivel, ejecutivos de alto nivel de corporaciones que pertenecen al Estado,
+        funcionarios importantes de partidos políticos. (En base a la definición establecida en Articulo 4 Ley 23/2015).</p>
+      </div>
+      <div class="tabled-checkboxes">
+        <div class="fields-block-wrapper px-0">
+          <div class="d-flex">
+            <div class="single-field flex-90">
+            </div>
+            <div class="single-field flex-5">
+              <p>Si</p>
+            </div>
+            <div class="single-field flex-5">
+              <p>No</p>
+            </div>
+          </div>
+          <div class="tabled-checkboxes-rows">
+            <div class="d-flex">
+              <div class="tc-row single-field flex-80">
+                <p>¿Es Ud. Una Persona Políticamente Expuesta (PEP)?</p>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="PEP" type="radio" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="PEP" type="radio" id="Salario">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="tc-row single-field flex-80">
+                <p>¿Es Ud. Familiar Cercano (cónyuge o 1er grado consanguinidad) de PEP?
+                </p>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="PEP_Close" type="radio" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="PEP_Close" type="radio" id="Salario" value="aaaa">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="tc-row single-field flex-80">
+                <p>¿Declara que en los últimos 5 años (según la definición) se considera como PEP?
+                </p>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="PEP_Five" type="radio" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="PEP_Five" type="radio" id="Salario">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Comunicación Seleccionar uno  o varios campos</b></p>
+      </div>
+      <div class="tabled-checkboxes">
+        <div class="fields-block-wrapper px-0">
+          <div class="d-flex">
+            <div class="single-field flex-50">
+            </div>
+            <div class="single-field flex-10">
+              <p>Titular</p>
+            </div>
+            <div class="single-field flex-10">
+              <p>Cotitular</p>
+            </div>
+            <div class="single-field flex-10">
+              <p>Firmante (s)</p>
+            </div>
+            <div class="single-field flex-10">
+              <p> Apoderado</p>
+            </div>
+            <div class="single-field flex-10">
+              <p>Beneficiario  <br>Accionista</p>
+            </div>
+          </div>
+          <div class="tabled-checkboxes-rows">
+            <div class="d-flex">
+              <div class="tc-row single-field flex-50">
+                <p>Personas autorizadas para instruir órdenes</p>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Orders_Autorise_Owner" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Orders_Autorise_Co_Owner" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Orders_Autorise_Signatory" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Orders_Autorise_Attorney" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Orders_Autorise_Beneficiary_Shareholder" type="text" id="Salario">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="tc-row single-field flex-50">
+                <p>Autorizado a dar instrucción de envío y recepción de tìtulos y efectivo
+                </p>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Send_receive_cash_Autorise_Owner" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Send_receive_cash_Autorise_Co_Owner" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Send_receive_cash__Autorise_Signatory" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Send_receive_cash_Autorise_Attorney" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="Send_receive_cash__Beneficiary_Shareholder" type="checkbox" id="Salario">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabled-checkboxes">
+        <div class="fields-block-wrapper px-0">
+          <div class="d-flex">
+            <div class="single-field flex-40">
+            </div>
+            <div class="single-field flex-10">
+              <p>Correo</p>
+            </div>
+            <div class="single-field flex-10">
+              <p>Documentos <br>Escritos</p>
+            </div>
+            <div class="single-field flex-10">
+              <p>Vía <br>Telefónica</p>
+            </div>
+            <div class="single-field flex-10">
+              <p> Plataformas <br>de Texto</p>
+            </div>
+            <div class="single-field flex-10">
+              <p>Directamente </p>
+            </div>
+            <div class="single-field flex-10">
+              <p>Todas las Anteriores </p>
+            </div>
+          </div>
+          <div class="tabled-checkboxes-rows">
+            <div class="d-flex">
+              <div class="tc-row single-field flex-40">
+                <p>Las órdenes podrán ser colocadas por</p>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="" type="checkbox" id="Salario">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <div class="checkbox-block">
+                  <input name="" type="checkbox" id="Salario">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="tc-row single-field flex-30">
+                <p>Autorizado a dar instrucción de envío y recepción de tìtulos y efectivo
+                </p>
+              </div>
+              <div class="tc-row single-field flex-20">
+                <div class="checkbox-block">
+                  <input name="Autorise_Give_instuctions" type="radio" id="no-discrecional">
+                  <label for="no-discrecional">No Discrecional</label>
+                </div>
+                <div class="checkbox-block">
+                  <input name="Autorise_Give_instuctions" type="radio" id="si">
+                  <label for="si">Si</label>
+                </div>
+              </div>
+              <div class="tc-row single-field flex-50">
+                <p>De ser afirmativa completar:</p>
+                <div class="checkboxes-group m-0">
+                  <div class="checkbox-block">
+                    <input name="Complete1" type="checkbox" id="Ahorro">
+                  </div>
+                  <div class="checkbox-block">
+                    <input name="Complete2" type="checkbox" id="Pensión">
+                  </div>
+                  <div class="checkbox-block">
+                    <input name="Complete3" type="checkbox" id="Salario">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabled-checkboxes-rows">
+            <div class="d-flex">
+              <div class="tc-row single-field flex-80">
+                <p>de Firmus-Octogone Inc. a su disposicion y solicitud </p>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <label for="Si">Si</label>
+                <div class="checkbox-block">
+                  <input name="Autorise_Firmus" type="checkbox" id="Si">
+                </div>
+              </div>
+              <div class="tc-row single-field flex-10">
+                <label for="No">No</label>
+                <div class="checkbox-block">
+                  <input name="Autorise_Firmus" type="checkbox" id="No">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="tc-row single-field flex-60">
+                <p>Si su respuesta es No indique como desea recibir los Estados de Cuenta:</p>
+              </div>
+              <div class="tc-row single-field flex-40">
+                <div class="checkboxes-group">
+                  <div class="checkbox-block">
+                    <input name="Receive_AS_Saving" type="checkbox" id="Ahorro">
+                    <label for="Ahorro">Ahorro</label>
+                  </div>
+                  <div class="checkbox-block">
+                    <input name="Receive_AS_Pension" type="checkbox" id="Pensión">
+                    <label for="Pensión">Pensión</label>
+                  </div>
+                  <div class="checkbox-block">
+                    <input name="Receive_AS_Salary" type="checkbox" id="Salario">
+                    <label for="Salario">Salario</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="tc-row single-field flex-50">
+                <p>Desea recibirlos con periodicidad</p>
+              </div>
+              <div class="tc-row single-field flex-50">
+                <div class="checkboxes-group">
+                  <div class="checkbox-block">
+                    <input name="Receive_Mensual" type="checkbox" id="Mensual">
+                    <label for="Mensual">Mensual</label>
+                  </div>
+                  <div class="checkbox-block">
+                    <input name="Receive_Trimestral" type="checkbox" id="Trimestral">
+                    <label for="Trimestral">Trimestral</label>
+                  </div>
+                  <div class="checkbox-block">
+                    <input name="Receive_Semestral" type="checkbox" id="Semestral">
+                    <label for="Semestral">Semestral</label>
+                  </div>
+                  <div class="checkbox-block">
+                    <input name="Receive_Anual" type="checkbox" id="Anual">
+                    <label for="Anual">Anual</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper m-0">
+        <div class="d-flex">
+          <div class="single-field flex-100">
+            <div class="horizontal-form-field">
+              <p>Datos Generales, de ser diferente suministrar el mismo:</p>
+              <input name="General_Data" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Declaración</b></p>
+      </div>
+      <div class="gray-paragraph">
+        <p>Confirmo (Confirmamos) que he (hemos) comprendido los términos del acuerdo de cuenta de inversión, incluyendo los modos de comunicación, acceso en línea, notificaciones y demás términos. <br><br>
+        Actuando en mi propio nombre y de manera voluntaria, declaro (declaramos) que hemos comprendido a cabalidad la información que se ha solicitado y respondiendo los campos de forma veraz y correcta en todo su alcance de forma plena e irrevocable; autorizando a Firmus-Octogone Inc. para la verificación de los datos suministrados en esta plantilla, advirtiendo de forma inmediata cualquier suceso que implique modificación de la información aquí declarada, de las circunstancias económicas, financieras y/o personales, del titular de la cuenta, firmantes autorizados, propietario efectivo o beneficiario finales. <br><br>
+        Confirmo (Confirmamos) estar anuente que las condiciones generales entregadas forman parte de la relación contractual presente.</p>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Firma (s) Cliente (s)</b></p>
+      </div>
+      <div class="fields-block-wrapper m-0 px-0">
+        <div class="tabled-checkboxes-rows">
+          <div class="d-flex">
+            <div class="tc-row single-field flex-20">
+              <p>Tipo de Firma:</p>
+            </div>
+            <div class="tc-row single-field flex-80">
+              <div class="checkboxes-group m-0">
+                <div class="checkbox-block">
+                  <input name="Signature1_Permanent" type="checkbox" id="fijo">
+                  <label for="fijo">Fijo</label>
+                </div>
+                <div class="checkbox-block">
+                  <input name="Signature1_Not_variable"  type="checkbox" id="Variable">
+                  <label for="Variable">No Variable</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-50">
+            <div class="vertical-form-field">
+              <p>Nombre completo (en imprenta):</p>
+              <input name="Full_name1" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-50">
+            <div class="vertical-form-field">
+              <p>Nombre completo (en imprenta):</p>
+              <input name="Full_name2" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-50">
+            <div class="horizontal-form-field">
+              <p>No. de Documento (ID):</p>
+              <input name="Document1_ID"  type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-50">
+            <div class="horizontal-form-field">
+              <p>No. de Documento (ID):</p>
+              <input name="Document2_ID" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-25">
+          </div>
+          <div class="single-field flex-25">
+            <div class="vertical-form-field">
+              <p>Fecha:</p>
+              <input name="Signature1_Date" type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-25">
+          </div>
+          <div class="single-field flex-25">
+            <div class="vertical-form-field">
+              <p>Fecha:</p>
+              <input name="Signature2_Date" type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field signature flex-50">
+            <div class="signature-block"></div>
+            <p>Firma</p>
+          </div>
+          <div class="single-field signature flex-50">
+            <div class="signature-block"></div>
+            <p>Firma</p>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-subtext">
+        <p><b>Firma (s) Personal de la Casa de Valores</b></p>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-33">
+            <div class="vertical-form-field">
+              <p>Nombre del Corredor:</p>
+              <input name="Runners_Name" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-33">
+            <div class="vertical-form-field">
+              <p>Nombre del Oficial de Cumplimiento:</p>
+              <input name="Compliance_Officer_Name" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-33">
+            <div class="vertical-form-field">
+              <p>Nombre del Ejecutivo Principal:</p>
+              <input name="Chief_Executive_Name" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-33">
+            <div class="vertical-form-field">
+              <p>Fecha:</p>
+              <input name="Runners_Date"  type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-33">
+            <div class="vertical-form-field">
+              <p>Fecha:</p>
+              <input name="Compliance__Officer_Date" type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-33">
+            <div class="vertical-form-field">
+              <p>Fecha:</p>
+              <input name="Chief_Executive_Date" type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field signature flex-33">
+            <div class="signature-block"></div>
+            <p>Firma del Corredor de Valores</p>
+          </div>
+          <div class="single-field signature flex-33">
+            <div class="signature-block"></div>
+            <p>Firma del Corredor de Valores</p>
+          </div>
+          <div class="single-field signature flex-33">
+            <div class="signature-block"></div>
+            <p>Firma del Ejecutivo Principal</p>
+          </div>
+        </div>
+      </div>
+<center><input class="active5" name="btn_submit" value=" Save Data " type="submit"></center> 
+<br>
+<br>
+</form>
+
+      <div class="border"></div>
+      <div class="pdf-address">
+        <h6>PH Times Square Center, Oficinas 17 D-E, Costa del Este, Av. Costa del Sol, Ciudad de Panamá.</h6>
+        <ul>
+          <li><a href="tel:+ 507 310 062">+ 507 310 062</a></li>
+          <li><a href="www.firmus-financial.com"> www.firmus-financial.com</a></li>
+        </ul>
+        <p>Entidad Regulada y Supervisada por la Superintendencia del Mercado de Valores de la República de Panamá bajo Resolución No. 630-2014</p>
+      </div>
+    </section>
+
+
+	</body>
+</html>

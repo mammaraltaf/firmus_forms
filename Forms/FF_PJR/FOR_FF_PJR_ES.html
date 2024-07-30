@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <title>Firmus Financial Inc.</title>
+
+	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link  href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<!-- script -->
+	<script src="../js/jquery-1.10.2.js" type="text/javascript"></script> 
+	<script src="../js/jquery-ui.js" type="text/javascript"></script>
+	<script src="../js/jquery.ui.datepicker-fr.js" type="text/javascript"></script>
+<script type ="text/javascript">
+$(document).ready(function() {
+// Datepicker Popups calender to Choose date.
+    $(function() {
+        $("#datepicker").datepicker();
+        $("#datepicker1").datepicker();
+		$("#datepicker2").datepicker();
+		$("#datepicker3").datepicker();
+		$("#datepicker4").datepicker();
+		$("#datepicker5").datepicker();
+		$("#datepicker6").datepicker();
+// Pass the user selected date format.
+        $("#format").change(function() {
+            $("#datepicker").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker1").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker2").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker3").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker4").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker5").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker6").datepicker("option", "dateFormat", $(this).val());
+        });
+    });
+});
+</script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.dataTables.js" type="text/javascript"></script>
+     
+        <script type="text/javascript">
+            
+                $(document).ready(function() {
+                        $('#example').dataTable( {
+                                "language": {
+								  "url": "../js/French.json"
+                               }
+                          } );
+                          } );
+						  
+	</script>
+
+	
+	
+  </head>
+  <body>
+    <form name="form1" method="POST" action="ajout.php">
+
+    <section class="wrapper">
+      <div class="top-logo">
+        <div class="flex-container">
+          <img src="../images/logo.svg" alt="Firmus Financial" class="img-fluid" style="margin-left: 400px;margin-right: 200;">
+          <label for="account_number" style="margin-left: 120px;">Número de cuenta:</label>
+          <input type="text" name="account_number" placeholder="Número de cuenta" />
+        </div>
+      </div>
+      <div class="pdf-type-text">
+        <h6>Identificación de Beneficiario, Director, Representante Legal, Protector u Otros</h6>
+      </div>
+      <div class="fields-block-wrapper bg-gray">
+        <div class="d-flex align-items-center">
+          <div class="single-field flex-60">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input type="checkbox" name="E1_Type_Beneficiary" value="1" id="Beneficiario">
+                <label for="Beneficiario">Beneficiario</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E1_Type_Director" value="1" id="Director">
+                <label for="Director">Director</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E1_Type_Legal_Representative" value="1" id="Representante-Legal">
+                <label for="Representante-Legal">Representante Legal</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E1_Type_Protective"  value="1" id="Protector">
+                <label for="Protector">Protector</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Otro:</p>
+              <input type="text" name="E1_Type_Other"  class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Nombre(s):</p>
+              <input type="text"  name="E1_Name"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Apellido(s):</p>
+              <input type="text" name="E1_surname"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nacionalidad:</p>
+              <input type="text" name="E1_Country" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Estado Civil:</p>
+              <input type="text" name="E1_C_Status"  class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Tipo de Documento (ID):</p>
+              <input type="text" name="E1_ID_type"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>No. de Documento (ID):</p>
+              <input type="text" name="E1_ID_No"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Vencimiento (ID):</p>
+              <input type="text" name="E1_ID_Expire_Date"   class="form-control" id="datepicker" placeholder="DD/MM/AAAA..">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Nacimiento:</p>
+              <input type="text" name="E1_Birth_Date"   class="form-control" id="datepicker1" placeholder="DD/MM/AAAA..">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Lugar de Nacimiento:</p>
+              <input type="text" name="E1_Birth_Place"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-60">
+            <div class="vertical-form-field">
+              <p>Correo Electrónico:</p>
+              <input type="text" name="E1_Email"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Profesión u Oficio:</p>
+              <input type="text" name="E1_Profession"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Ocupación Actual:</p>
+              <input type="text" name="E1_Profession_Current"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Personal:</p>
+              <input type="text" name="E1_Home_Adress"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Domicilio / Casa:</p>
+              <input type="text" name="E1_Home_Adress_Number"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input type="text" name="E1_Home_Postal_Adress"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax</p>
+              <input type="text" name="E1_Home_Fax"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>No. de Teléfóno:</p>
+              <input type="text" name="E1_Phone"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">Parte Relacionada:
+                <input type="radio" name="E1_Part_Rel" value="1"  id="Si">
+                <label for="Si">Si</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="radio" name="E1_Part_Rel" value="0"   id="No">
+                <label for="No">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>De ser afirmativa su respuesta, explique:</p>
+              <input type="text" name="E1_Part_Rel_Raison"   class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-text">
+        <h6>Identificación de Beneficiario, Director, Representante Legal, Protector u Otros</h6>
+      </div>
+      <div class="fields-block-wrapper bg-gray">
+        <div class="d-flex align-items-center">
+          <div class="single-field flex-60">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input type="checkbox" name="E2_Type_Beneficiary" value="1" id="Beneficiario">
+                <label for="Beneficiario">Beneficiario</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E2_Type_Director" value="1" id="Director">
+                <label for="Director">Director</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E2_Type_Legal_Representative" value="1" id="Representante-Legal">
+                <label for="Representante-Legal">Representante Legal</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E2_Type_Protective"  value="1" id="Protector">
+                <label for="Protector">Protector</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Otro:</p>
+              <input type="text" name="E2_Type_Other"  class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Nombre(s):</p>
+              <input type="text"  name="E2_Name"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Apellido(s):</p>
+              <input type="text" name="E2_surname"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nacionalidad:</p>
+              <input type="text" name="E2_Country" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Estado Civil:</p>
+              <input type="text" name="E2_C_Status"  class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Tipo de Documento (ID):</p>
+              <input type="text" name="E2_ID_type"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>No. de Documento (ID):</p>
+              <input type="text" name="E2_ID_No"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Vencimiento (ID):</p>
+              <input type="text" name="E2_ID_Expire_Date"   class="form-control" id="datepicker2" placeholder="DD/MM/AAAA..">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Nacimiento:</p>
+              <input type="text" name="E2_Birth_Date"   class="form-control" id="datepicker3" placeholder="DD/MM/AAAA..">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Lugar de Nacimiento:</p>
+              <input type="text" name="E2_Birth_Place"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-60">
+            <div class="vertical-form-field">
+              <p>Correo Electrónico:</p>
+              <input type="text" name="E2_Email"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Profesión u Oficio:</p>
+              <input type="text" name="E2_Profession"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Ocupación Actual:</p>
+              <input type="text" name="E2_Profession_Current"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Personal:</p>
+              <input type="text" name="E2_Home_Adress"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Domicilio / Casa:</p>
+              <input type="text" name="E2_Home_Adress_Number"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input type="text" name="E2_Home_Postal_Adress"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax</p>
+              <input type="text" name="E2_Home_Fax"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>No. de Teléfóno:</p>
+              <input type="text" name="E2_Phone"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">Parte Relacionada:
+                <input type="radio" name="E2_Part_Rel" value="1"  id="Si">
+                <label for="Si">Si</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="radio" name="E2_Part_Rel" value="0"   id="No">
+                <label for="No">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>De ser afirmativa su respuesta, explique:</p>
+              <input type="text" name="E2_Part_Rel_Raison"   class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+	        <div class="pdf-type-text">
+        <h6>Identificación de Beneficiario, Director, Representante Legal, Protector u Otros</h6>
+      </div>
+      <div class="fields-block-wrapper bg-gray">
+        <div class="d-flex align-items-center">
+          <div class="single-field flex-60">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input type="checkbox" name="E3_Type_Beneficiary" value="1" id="Beneficiario">
+                <label for="Beneficiario">Beneficiario</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E3_Type_Director" value="1" id="Director">
+                <label for="Director">Director</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E3_Type_Legal_Representative" value="1" id="Representante-Legal">
+                <label for="Representante-Legal">Representante Legal</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" name="E3_Type_Protective"  value="1" id="Protector">
+                <label for="Protector">Protector</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Otro:</p>
+              <input type="text" name="E3_Type_Other"  class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Nombre(s):</p>
+              <input type="text"  name="E3_Name"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Apellido(s):</p>
+              <input type="text" name="E3_surname"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nacionalidad:</p>
+              <input type="text" name="E3_Country" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Estado Civil:</p>
+              <input type="text" name="E3_C_Status"  class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Tipo de Documento (ID):</p>
+              <input type="text" name="E3_ID_type"  class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>No. de Documento (ID):</p>
+              <input type="text" name="E3_ID_No"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Vencimiento (ID):</p>
+              <input type="text" name="E3_ID_Expire_Date"   class="form-control" id="datepicker4" placeholder="DD/MM/AAAA..">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Nacimiento:</p>
+              <input type="text" name="E3_Birth_Date"   class="form-control" id="datepicker5" placeholder="DD/MM/AAAA..">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Lugar de Nacimiento:</p>
+              <input type="text" name="E3_Birth_Place"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-60">
+            <div class="vertical-form-field">
+              <p>Correo Electrónico:</p>
+              <input type="text" name="E3_Email"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Profesión u Oficio:</p>
+              <input type="text" name="E3_Profession"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Ocupación Actual:</p>
+              <input type="text" name="E3_Profession_Current"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Personal:</p>
+              <input type="text" name="E3_Home_Adress"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Domicilio / Casa:</p>
+              <input type="text" name="E3_Home_Adress_Number"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input type="text" name="E3_Home_Postal_Adress"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax</p>
+              <input type="text" name="E3_Home_Fax"   class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>No. de Teléfóno:</p>
+              <input type="text" name="E3_Phone"   class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">Parte Relacionada:
+                <input type="radio" name="E3_Part_Rel" value="1"  id="Si">
+                <label for="Si">Si</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="radio" name="E3_Part_Rel" value="0"   id="No">
+                <label for="No">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>De ser afirmativa su respuesta, explique:</p>
+              <input type="text" name="E3_Part_Rel_Raison"   class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <center><input class="active5" name="btn_submit" value=" Save Data " type="submit"></center> 
+<br>
+<br>
+</form>
+      <div class="border"></div>
+      <div class="pdf-address">
+        <h6>PH Times Square Center, Oficinas 17 D-E, Costa del Este, Av. Costa del Sol, Ciudad de Panamá.</h6>
+        <ul>
+          <li><a href="tel:+ 507 310 062">+ 507 310 0625</a></li>
+          <li><a href="www.firmus-financial.com"> www.firmus-financial.com</a></li>
+        </ul>
+        <p>Entidad Regulada y Supervisada por la Superintendencia del Mercado de Valores de la República de Panamá bajo Resolución No. 630-2014</p>
+      </div>
+    </section>
+    <script>
+      // Elements
+const numberCodeForm = document.querySelector('[data-number-code-form]');
+const numberCodeInputs = [...numberCodeForm.querySelectorAll('[data-number-code-input]')];
+
+// Event callbacks
+const handleInput = ({target}) => {
+  if (!target.value.length) { return target.value = null; }
+  
+  const inputLength = target.value.length;
+  let currentIndex = Number(target.dataset.numberCodeInput);
+  
+  if (inputLength > 1) {
+    const inputValues = target.value.split('');
+    
+    inputValues.forEach((value, valueIndex) => {
+      const nextValueIndex = currentIndex + valueIndex;
+      
+      if (nextValueIndex >= numberCodeInputs.length) { return; }
+      
+      numberCodeInputs[nextValueIndex].value = value;
+    });
+    
+    currentIndex += inputValues.length - 2;
+  }
+ 
+  const nextIndex = currentIndex + 1;
+  
+  if(nextIndex < numberCodeInputs.length) {
+    numberCodeInputs[nextIndex].focus();
+  }
+}
+
+const handleKeyDown = e => {
+  const {code, target} = e;
+  
+  const currentIndex = Number(target.dataset.numberCodeInput);
+  const previousIndex = currentIndex - 1;
+  const nextIndex = currentIndex + 1;
+  
+  const hasPreviousIndex = previousIndex >= 0;
+  const hasNextIndex = nextIndex <= numberCodeInputs.length - 1
+  
+  switch(code) {
+    case 'ArrowLeft':
+    case 'ArrowUp':
+      if (hasPreviousIndex) {
+        numberCodeInputs[previousIndex].focus();
+      }
+      e.preventDefault();
+      break;
+      
+    case 'ArrowRight':
+    case 'ArrowDown':
+      if (hasNextIndex) {
+        numberCodeInputs[nextIndex].focus();
+      }
+      e.preventDefault();
+      break;
+    case 'Backspace':
+      if (!e.target.value.length && hasPreviousIndex) {
+        numberCodeInputs[previousIndex].value = null;
+        numberCodeInputs[previousIndex].focus();
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+// Event listeners
+numberCodeForm.addEventListener('input', handleInput);
+numberCodeForm.addEventListener('keydown', handleKeyDown);
+    </script>
+  </body>
+</html>

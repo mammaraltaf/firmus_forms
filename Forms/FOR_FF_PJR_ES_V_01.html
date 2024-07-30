@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <title>Firmus Financial Inc.</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="top-logo">
+        <img src="images/logo.svg" alt="Firmus Financial" class="img-fluid" />
+      </div>
+      <div class="pdf-type-text">
+        <h6>Identificación de Beneficiario, Director, Representante Legal, Protector u Otros</h6>
+      </div>
+      <div class="fields-block-wrapper bg-gray">
+        <div class="d-flex align-items-center">
+          <div class="single-field flex-60">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input type="checkbox" id="Beneficiario">
+                <label for="Beneficiario">Beneficiario</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Director">
+                <label for="Director">Director</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Representante-Legal">
+                <label for="Representante-Legal">Representante Legal</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Protector">
+                <label for="Protector">Protector</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Otro:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Nombre(s):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Apellido(s):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nacionalidad:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Estado Civil:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Tipo de Documento (ID):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>No. de Documento (ID):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Vencimiento (ID):</p>
+              <input type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Nacimiento:</p>
+              <input type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Lugar de Nacimiento:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-60">
+            <div class="vertical-form-field">
+              <p>Correo Electrónico:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Profesión u Oficio:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Ocupación Actual:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Personal:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Domicilio / Casa:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>No. de Teléfóno:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">
+                <input type="checkbox" id="Si">
+                <label for="Si">Si</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="No">
+                <label for="No">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>De ser afirmativa su respuesta, explique:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-text">
+        <h6>Identificación de Beneficiario, Director, Representante Legal, Protector u Otros</h6>
+      </div>
+      <div class="fields-block-wrapper bg-gray">
+        <div class="d-flex align-items-center">
+          <div class="single-field flex-60">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input type="checkbox" id="Beneficiario2">
+                <label for="Beneficiario2">Beneficiario</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Director2">
+                <label for="Director2">Director</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Representante-Legal2">
+                <label for="Representante-Legal2">Representante Legal</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Protector2">
+                <label for="Protector2">Protector</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Otro:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Nombre(s):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Apellido(s):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nacionalidad:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Estado Civil:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Tipo de Documento (ID):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>No. de Documento (ID):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Vencimiento (ID):</p>
+              <input type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Nacimiento:</p>
+              <input type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Lugar de Nacimiento:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-60">
+            <div class="vertical-form-field">
+              <p>Correo Electrónico:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Profesión u Oficio:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Ocupación Actual:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Personal:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Domicilio / Casa:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>No. de Teléfóno:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">
+                <input type="checkbox" id="Si">
+                <label for="Si">Si</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="No">
+                <label for="No">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>De ser afirmativa su respuesta, explique:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pdf-type-text">
+        <h6>Identificación de Beneficiario, Director, Representante Legal, Protector u Otros</h6>
+      </div>
+      <div class="fields-block-wrapper bg-gray">
+        <div class="d-flex align-items-center">
+          <div class="single-field flex-60">
+            <div class="checkboxes-group m-0">
+              <div class="checkbox-block">
+                <input type="checkbox" id="Beneficiario3">
+                <label for="Beneficiario3">Beneficiario</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Director3">
+                <label for="Director3">Director</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Representante-Legal3">
+                <label for="Representante-Legal3">Representante Legal</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="Protector3">
+                <label for="Protector3">Protector</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="horizontal-form-field">
+              <p>Otro:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-block-wrapper">
+        <div class="d-flex">
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Nombre(s):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-30">
+            <div class="vertical-form-field">
+              <p>Apellido(s):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nacionalidad:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Estado Civil:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Tipo de Documento (ID):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>No. de Documento (ID):</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Vencimiento (ID):</p>
+              <input type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fecha de Nacimiento:</p>
+              <input type="text" class="form-control">
+              <small>DD/MM/AAAA</small>
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Lugar de Nacimiento:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-60">
+            <div class="vertical-form-field">
+              <p>Correo Electrónico:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Profesión u Oficio:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Ocupación Actual:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>Domicilio Personal:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Nº de Domicilio / Casa:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Dirección Postal:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="vertical-form-field">
+              <p>Fax</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mt-16">
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>No. de Teléfóno:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="single-field flex-20">
+            <div class="checkboxes-group">
+              <div class="checkbox-block">
+                <input type="checkbox" id="Si">
+                <label for="Si">Si</label>
+              </div>
+              <div class="checkbox-block">
+                <input type="checkbox" id="No">
+                <label for="No">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="single-field flex-40">
+            <div class="vertical-form-field">
+              <p>De ser afirmativa su respuesta, explique:</p>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border"></div>
+      <div class="pdf-address">
+        <h6>PH Times Square Center, Oficinas 17 D-E, Costa del Este, Av. Costa del Sol, Ciudad de Panamá.</h6>
+        <ul>
+          <li><a href="tel:+ 507 310 062">+ 507 310 062</a></li>
+          <li><a href="www.firmus-financial.com"> www.firmus-financial.com</a></li>
+        </ul>
+        <p>Entidad Regulada y Supervisada por la Superintendencia del Mercado de Valores de la República de Panamá bajo Resolución No. 630-2014</p>
+      </div>
+    </section>
+    <script>
+      // Elements
+const numberCodeForm = document.querySelector('[data-number-code-form]');
+const numberCodeInputs = [...numberCodeForm.querySelectorAll('[data-number-code-input]')];
+
+// Event callbacks
+const handleInput = ({target}) => {
+  if (!target.value.length) { return target.value = null; }
+  
+  const inputLength = target.value.length;
+  let currentIndex = Number(target.dataset.numberCodeInput);
+  
+  if (inputLength > 1) {
+    const inputValues = target.value.split('');
+    
+    inputValues.forEach((value, valueIndex) => {
+      const nextValueIndex = currentIndex + valueIndex;
+      
+      if (nextValueIndex >= numberCodeInputs.length) { return; }
+      
+      numberCodeInputs[nextValueIndex].value = value;
+    });
+    
+    currentIndex += inputValues.length - 2;
+  }
+ 
+  const nextIndex = currentIndex + 1;
+  
+  if(nextIndex < numberCodeInputs.length) {
+    numberCodeInputs[nextIndex].focus();
+  }
+}
+
+const handleKeyDown = e => {
+  const {code, target} = e;
+  
+  const currentIndex = Number(target.dataset.numberCodeInput);
+  const previousIndex = currentIndex - 1;
+  const nextIndex = currentIndex + 1;
+  
+  const hasPreviousIndex = previousIndex >= 0;
+  const hasNextIndex = nextIndex <= numberCodeInputs.length - 1
+  
+  switch(code) {
+    case 'ArrowLeft':
+    case 'ArrowUp':
+      if (hasPreviousIndex) {
+        numberCodeInputs[previousIndex].focus();
+      }
+      e.preventDefault();
+      break;
+      
+    case 'ArrowRight':
+    case 'ArrowDown':
+      if (hasNextIndex) {
+        numberCodeInputs[nextIndex].focus();
+      }
+      e.preventDefault();
+      break;
+    case 'Backspace':
+      if (!e.target.value.length && hasPreviousIndex) {
+        numberCodeInputs[previousIndex].value = null;
+        numberCodeInputs[previousIndex].focus();
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+// Event listeners
+numberCodeForm.addEventListener('input', handleInput);
+numberCodeForm.addEventListener('keydown', handleKeyDown);
+    </script>
+  </body>
+</html>
