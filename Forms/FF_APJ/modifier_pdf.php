@@ -14,8 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.min.js" integrity="sha512-2ziYH4Qk1Cs0McWDB9jfPYzvRgxC8Cj62BUC2fhwrP/sUBkkfjYk3142xTKyuCyGWL4ooW8wWOzMTX86X1xe3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!----/html2pdf.js------>
       </head>
-<input class="active5" name="btn_pdf" value="Download as PDF File " type="button" onclick="html2pdf(document.body)">
-<?PHP
+      <input class="active5" name="btn_pdf" value="Download as PDF File " type="button" onclick="window.location.href='pdf/generate_pdf.php?id=<?php echo $id; ?>'">
+      <?PHP
 error_reporting(0);
 include "../dbclass.php";
 include "../functions.php";
