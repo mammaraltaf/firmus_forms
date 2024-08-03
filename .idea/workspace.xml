@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8a1973e-f1ad-48e0-a8b8-b723a20cfb0b" name="Changes" comment="updated forms" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;osama294&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mammaraltaf/firmus_forms.git&quot;,
+    &quot;accountId&quot;: &quot;96e71293-0187-4610-926a-219d4350b4e3&quot;
+  }
+}</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-8.1.10-Win32-vs16-x64\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2jDcayCwnExy9JkshxBzrA0BPk1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/laragon/www/firmus_forms/Forms/FF_VAC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\firmus_forms\Forms\FF_VAC" />
+      <recent name="D:\laragon\www\firmus_forms\Forms\FF_PNC" />
+      <recent name="D:\laragon\www\firmus_forms\Forms\FF_PNB" />
+      <recent name="D:\laragon\www\firmus_forms\Forms\FF_PNA" />
+      <recent name="D:\laragon\www\firmus_forms\Forms\FF_PJR" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\firmus_forms\Forms\FF_APN\pdf" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8a1973e-f1ad-48e0-a8b8-b723a20cfb0b" name="Changes" comment="" />
+      <created>1720925155651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720925155651</updated>
+      <workItem from="1720925156706" duration="2534000" />
+      <workItem from="1720932546633" duration="159000" />
+      <workItem from="1720982367771" duration="1109000" />
+      <workItem from="1720983593668" duration="1302000" />
+      <workItem from="1720985612643" duration="520000" />
+      <workItem from="1721022812963" duration="14618000" />
+      <workItem from="1721041579002" duration="3018000" />
+      <workItem from="1721044817520" duration="1477000" />
+      <workItem from="1721071999736" duration="6681000" />
+      <workItem from="1721143449381" duration="27000" />
+      <workItem from="1721163267396" duration="2880000" />
+      <workItem from="1721210267413" duration="11227000" />
+      <workItem from="1721242186262" duration="11743000" />
+      <workItem from="1721282487927" duration="9000" />
+      <workItem from="1721310207962" duration="900000" />
+      <workItem from="1721324432939" duration="5446000" />
+      <workItem from="1721367397542" duration="643000" />
+      <workItem from="1721372676546" duration="60000" />
+      <workItem from="1721389989025" duration="3669000" />
+      <workItem from="1721402391369" duration="2931000" />
+      <workItem from="1721406448741" duration="1587000" />
+      <workItem from="1721427276543" duration="579000" />
+      <workItem from="1721460765726" duration="2262000" />
+      <workItem from="1721487755079" duration="360000" />
+      <workItem from="1721488353348" duration="2616000" />
+      <workItem from="1721594235800" duration="5009000" />
+      <workItem from="1721599698468" duration="164000" />
+      <workItem from="1721627588272" duration="25000" />
+      <workItem from="1721668563653" duration="10867000" />
+      <workItem from="1721717856021" duration="24000" />
+      <workItem from="1721757576031" duration="9563000" />
+      <workItem from="1721799599166" duration="7000" />
+      <workItem from="1721855455423" duration="2766000" />
+      <workItem from="1721885881676" duration="10000" />
+      <workItem from="1721929354808" duration="10988000" />
+      <workItem from="1721944651433" duration="1218000" />
+      <workItem from="1721972580762" duration="63000" />
+      <workItem from="1721973284997" duration="2772000" />
+      <workItem from="1722005517513" duration="796000" />
+      <workItem from="1722064760561" duration="2770000" />
+      <workItem from="1722068270203" duration="3190000" />
+      <workItem from="1722080141292" duration="6270000" />
+      <workItem from="1722164823692" duration="642000" />
+      <workItem from="1722234801212" duration="23000" />
+      <workItem from="1722315401386" duration="13000" />
+      <workItem from="1722540621909" duration="5367000" />
+      <workItem from="1722578511748" duration="29000" />
+      <workItem from="1722594500944" duration="1010000" />
+      <workItem from="1722622697083" duration="13004000" />
+      <workItem from="1722697010468" duration="4641000" />
+    </task>
+    <task id="LOCAL-00001" summary="updated forms">
+      <option name="closed" value="true" />
+      <created>1722699121446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722699121446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="updated forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated forms" />
+  </component>
+</project>
