@@ -289,7 +289,7 @@ ob_start();
         <section class="wrapper">
             <div class="top-logo">
                 <div class="flex-container">
-                    <img src="/images/logo.svg" alt="Firmus Financial" class="img-fluid" style="margin-left: 400px;margin-right: 200;">
+                    <img src="/images/logo.svg" alt="Firmus Financial" class="img-fluid" style="margin-left: 400px;">
                     <label for="account_number" style="margin-left: 120px;">Número de cuenta:</label>
                     <input type="text" name="account_number" value= "<?php echo $account_number; ?>" placeholder="Número de cuenta" />
                 </div>
