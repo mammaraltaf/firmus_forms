@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-require '../vendor/autoload.php';
+require '../../../vendor/autoload.php';
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
@@ -18,8 +18,8 @@ ob_start();
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style_pdf.css" rel="stylesheet">
-        <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+        <link href="../../css/style_pdf.css" rel="stylesheet">
+        <link href="../../favicon.png" rel="shortcut icon" type="image/x-icon" />
         <title>Firmus Financial Inc.</title>
         <style>
             body {
@@ -121,8 +121,8 @@ ob_start();
     </head>
     <?PHP
     error_reporting(E_ALL);
-    include "dbclass.php";
-    include "functions.php";
+    include "../../dbclass.php";
+    include "../../functions.php";
     $db = new database('');
     $db->connect();
     $id=$_GET['id'];
