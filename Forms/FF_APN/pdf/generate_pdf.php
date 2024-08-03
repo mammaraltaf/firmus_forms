@@ -4,6 +4,8 @@ require '../../../vendor/autoload.php';
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
+try {
+
 $options = new Options();
 $options->set('isHtml5ParserEnabled', true);
 $options->set('isRemoteEnabled', true);
@@ -1418,6 +1420,8 @@ $dompdf->render();
 
 // Output the generated PDF to Browser
 $dompdf->stream("dynamic_data.pdf", array("Attachment" => 1));
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+    // Optionally log this error to a file or error handling service
+}
 ?>
-?>
-<?php
