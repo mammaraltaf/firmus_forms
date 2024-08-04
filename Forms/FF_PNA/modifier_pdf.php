@@ -11,7 +11,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.js" integrity="sha512-VqCeCECsaE2fYTxvPQk+OJ7+SQxzI1xZ6IqxuWd0GPKaJoeSFqeakVqNpMbx1AArieciBF71poL0dYTMiNgVxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.js" integrity="sha512-liPvfWpzKp7bXBAK05m+Uqrv5ATN4kCeUh64IygMoo98oEcTELOrymzU8omW2mEZszHHJ+qPOSkEzJLs2QqwQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.min.js" integrity="sha512-2ziYH4Qk1Cs0McWDB9jfPYzvRgxC8Cj62BUC2fhwrP/sUBkkfjYk3142xTKyuCyGWL4ooW8wWOzMTX86X1xe3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>	
-<!----/html2pdf.js------>	
+<!----/html2pdf.js------>
+      <style>
+          @media print {
+              .no-print {
+                  display: none;
+              }
+              .flex-container {
+                  /*text-align: left;*/
+                  /*padding: 25px 50px 0px 0px;*/
+              }
+
+              /*i want to make image on center of the page*/
+              .flex-container img {
+                  margin-left: 400px;
+                  margin-right: 200px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  /*max-width: 100%; !* Ensure the logo scales with the container *!*/
+                  /*height: auto;*/
+
+              }
+          }
+
+      </style>
   </head>
 <?PHP
 error_reporting(0);
@@ -113,7 +136,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
 ?>  
   
   <body>
-  <input class="active5" name="btn_pdf" value="Download as PDF File " type="button" onclick="html2pdf(document.body)">   
+  <input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="window.print();">
     <form name="form1" method="POST" action="modif.php">
 	<?PHP echo "<input type=hidden name=id value=$id>"; ?>
 	<section class="wrapper">

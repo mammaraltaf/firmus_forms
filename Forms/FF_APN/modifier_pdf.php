@@ -6,6 +6,29 @@
 	<link href="../css/style_pdf.css" rel="stylesheet">
 	<link href="../favicon.png" rel="shortcut icon" type="image/x-icon" />
     <title>Firmus Financial Inc.</title>
+      <style>
+          @media print {
+              .no-print {
+                  display: none;
+              }
+              .flex-container {
+                  /*text-align: left;*/
+                  /*padding: 25px 50px 0px 0px;*/
+              }
+
+              /*i want to make image on center of the page*/
+              .flex-container img {
+                    margin-left: 400px;
+                    margin-right: 200px;
+                    margin-left: auto;
+                    margin-right: auto;
+                  /*max-width: 100%; !* Ensure the logo scales with the container *!*/
+                  /*height: auto;*/
+
+              }
+          }
+
+      </style>
 <!----html2pdf.js------>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.js" integrity="sha512-VqCeCECsaE2fYTxvPQk+OJ7+SQxzI1xZ6IqxuWd0GPKaJoeSFqeakVqNpMbx1AArieciBF71poL0dYTMiNgVxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -18,7 +41,10 @@
   require 'edit_pdf_data.php';
   ?>
   <body>
-<input class="active5" name="btn_pdf" value="Download as PDF File " type="button" onclick="window.location.href='pdf/generate_pdf.php?id=<?php echo $id; ?>'">
+<!--<input class="active5" name="btn_pdf" value="Download as PDF File " type="button" onclick="window.location.href='pdf/generate_pdf.php?id=-->
+<?php //echo $id; ?>
+<!--        '">-->
+<input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="window.print();">
 <form name="form1" method="POST" action="modif.php">
 	<?PHP echo "<input type=hidden name=id value=$id>"; ?>
         <section class="wrapper">
