@@ -24,9 +24,7 @@ echo "<table id='accountsTable' class='table table-striped table-bordered'>";
                     <tr>
                         <th>ID</th>
                         <th>Account Number</th>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>Country</th>
+                        <th>Full Name</th>
                         <th>PDF</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -44,9 +42,7 @@ $full_name=$data['Full_name1'];
 echo "<tr>
 <td>$id</td>
 <td>$account_number</td>
-<td>$e_name</td>
-<td>$e_surname</td>
-<td>$e_country</td>
+<td>$full_name</td>
 <td><a href='modifier_pdf.php?id=$id'><img src='../images/pdf.png' title='View PDF'></a></td>
 <td><a href='modifier.php?id=$id'><img src='../images/editwg.gif' title='Modify'></a></td>
 <td><a href='supp.php?id=$id'><img src='../images/delete.gif' title='Delete'></a></td>
