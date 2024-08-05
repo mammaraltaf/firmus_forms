@@ -6,15 +6,14 @@
     <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../favicon.png" rel="shortcut icon" type="image/x-icon">
-
 </head>
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3>Perfil Financiero y Transaccional (FF-PFT-ES-V.01)</h3>
+    <h3>Perfil Financiero y Transaccional (FF-PFT-ES-V.01)</h3>
         <a href="./../../index.html" class="btn btn-primary">BACK TO MAIN MENU</a>
     </div>
 <?PHP
-//error_reporting(0);
+error_reporting(0);
 include "../dbclass.php";
 $db = new database('');
 $db->connect();
@@ -40,7 +39,7 @@ while( $data = $db->fetch_array() )
 $id=$data['id'];
 $account_number=$data['account_number'];
 $full_name=$data['Full_name1'];
-
+//Re-edited
 
 echo "<tr>
 <td>$id</td>
