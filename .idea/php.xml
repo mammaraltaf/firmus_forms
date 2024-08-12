@@ -19,6 +19,11 @@
       <path value="$PROJECT_DIR$/vendor/fpdf186/makefont" />
       <path value="$PROJECT_DIR$/vendor/fpdf186/font" />
       <path value="$PROJECT_DIR$/vendor/fpdf186/doc" />
+      <path value="$PROJECT_DIR$/vendor/dompdf-3.0.0/lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf-3.0.0/src" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">

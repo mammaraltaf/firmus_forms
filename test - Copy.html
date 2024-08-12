@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Firmus Financial Inc.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .header, .sub-header {
+            color: #fff;
+            padding: 10px 5px;
+            text-align: center;
+        }
+        .header {
+            background-color: #348ccb;
+        }
+        .sub-header {
+            background-color: #8ab5e1;
+        }
+        .input-text {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .gray-section {
+            background-color: #f0f0ef;
+            padding: 5px;
+        }
+        .checkbox, .radio {
+            cursor: pointer;
+        }
+        .checkbox-label, .radio-label {
+            margin: 0;
+            padding-left: 5px;
+            cursor: pointer;
+        }
+        .full-width {
+            width: 100%;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .small-text {
+            font-size: 12px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .mb-5 {
+            margin-bottom: 5px;
+        }
+        .mt-5 {
+            margin-top: 5px;
+        }
+        .no-border {
+            border: none;
+        }
+        .signature-block {
+            height: 100px;
+            border: 1px solid #ddd;
+            background-color: #f6f6f6;
+        }
+    </style>
+</head>
+<body>
+    <form action="ajout.php" method="POST">
+        <table class="full-width">
+            <tr class="header">
+                <td colspan="4">Apertura de Cuenta Persona Natural</td>
+            </tr>
+            <tr class="sub-header">
+                <td colspan="4">Datos Generales (Completar todos los campos de este formulario, de no aplicar colocar N/A)</td>
+            </tr>
+            <tr>
+                <td>Nombre(s):</td>
+                <td><input type="text" name="E_Name" class="input-text"></td>
+                <td>Apellido(s):</td>
+                <td><input type="text" name="E_surname" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Nacionalidad:</td>
+                <td><input type="text" name="E_Country" class="input-text"></td>
+                <td>Estado Civil:</td>
+                <td><input type="text" name="E_C_Status" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Tipo de Documento (ID):</td>
+                <td><input type="text" name="E_ID_type" class="input-text"></td>
+                <td>No. de Documento (ID):</td>
+                <td><input type="text" name="E_ID_No" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Fecha de Vencimiento (ID):</td>
+                <td><input type="text" name="E_ID_Expire_Date" class="input-text" placeholder="DD/MM/AAAA"></td>
+                <td>Fecha de Nacimiento:</td>
+                <td><input type="text" name="E_Birth_Date" class="input-text" placeholder="DD/MM/AAAA"></td>
+            </tr>
+            <tr>
+                <td>Lugar de Nacimiento:</td>
+                <td><input type="text" name="E_Birth_Place" class="input-text"></td>
+                <td>Correo Electrónico:</td>
+                <td><input type="text" name="E_Email" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Profesión u Oficio:</td>
+                <td><input type="text" name="E_Profession" class="input-text"></td>
+                <td>Ocupación Actual:</td>
+                <td><input type="text" name="E_Profession_Current" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Domicilio Personal:</td>
+                <td><input type="text" name="E_Home_Adress" class="input-text"></td>
+                <td>Nº de Domicilio / Casa:</td>
+                <td><input type="text" name="E_Home_Adress_Number" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Dirección Postal:</td>
+                <td><input type="text" name="E_Home_Postal_Adress" class="input-text"></td>
+                <td>Fax:</td>
+                <td><input type="text" name="E_Home_Fax" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Domicilio Laboral:</td>
+                <td><input type="text" name="E_Office_Adress" class="input-text"></td>
+                <td>Nº de Oficina:</td>
+                <td><input type="text" name="E_Office_Number" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Dirección Postal:</td>
+                <td><input type="text" name="E_Office_Postal_Adress" class="input-text"></td>
+                <td>Fax:</td>
+                <td><input type="text" name="E_Office_Fax" class="input-text"></td>
+            </tr>
+            <tr class="gray-section">
+                <td>Empleado con Salario:</td>
+                <td><input type="checkbox" name="E_Salary_Independ" value="1" class="checkbox"> Independiente</td>
+                <td><input type="checkbox" name="E_Salary_NotRetired" value="1" class="checkbox"> Jubilado</td>
+                <td><input type="checkbox" name="E_Salary_NotPensioned" value="1" class="checkbox"> Pensionado</td>
+            </tr>
+            <tr class="gray-section">
+                <td><input type="checkbox" name="E_Salary_Fixed" value="1" class="checkbox"> Fijo</td>
+                <td><input type="checkbox" name="E_Salary_Variable" value="1" class="checkbox"> Variable</td>
+                <td>Otro:</td>
+                <td><input type="text" name="E_Salary_Other" class="input-text"></td>
+            </tr>
+            <tr class="sub-header">
+                <td colspan="4">Origen de Fondos</td>
+            </tr>
+            <tr>
+                <td>Jurisdicciones principales de donde recibe/envía:</td>
+                <td colspan="3"><input type="text" name="Funds_Source1" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Recibe su Efectivo</td>
+                <td><input type="checkbox" name="Funds_Source1_Type_Receive_Cash" value="1" class="checkbox"></td>
+                <td>Envía su Efectivo</td>
+                <td><input type="checkbox" name="Funds_Source1_Type_Send_Cash" value="1" class="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Recibe sus Títulos</td>
+                <td><input type="checkbox" name="Funds_Source1_Type_Receive_Titles" value="1" class="checkbox"></td>
+                <td>Envía sus Títulos</td>
+                <td><input type="checkbox" name="Funds_Source1_Type_Submit_Titles" value="1" class="checkbox"></td>
+            </tr>
+            <!-- Additional fields here for second jurisdiction -->
+            <tr class="sub-header">
+                <td colspan="4">Fuente de los Recursos o Patrimonio</td>
+            </tr>
+            <tr>
+                <td>Nombre del Empleador / Independiente:</td>
+                <td colspan="3"><input type="text" name="RS_Employer_name" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Ingreso Anual (USD):</td>
+                <td><input type="number" name="RS_Annual_Income_USD" class="input-text"></td>
+                <td>Salario Anual (USD):</td>
+                <td><input type="number" name="RS_Annual_Salary_USD" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Años en la Empresa:</td>
+                <td><input type="text" name="RS_Years_in_Company" class="input-text"></td>
+                <td>Actividad:</td>
+                <td>
+                    <input type="checkbox" name="RS_Activity_Professional_fees" value="1" class="checkbox"> Honorarios Profesionales<br>
+                    <input type="checkbox" name="RS_Activity_Own_business" value="1" class="checkbox"> Negocio Propio
+                </td>
+            </tr>
+            <tr>
+                <td>Ahorro:</td>
+                <td><input type="checkbox" name="RS_Activity_Saving" value="1" class="checkbox"></td>
+                <td>Pensión:</td>
+                <td><input type="checkbox" name="RS_Activity_Pension" value="1" class="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Salario:</td>
+                <td><input type="checkbox" name="RS_Activity_Salary" value="1" class="checkbox"></td>
+                <td>Dividendos de Inversión:</td>
+                <td><input type="text" name="RS_Investment_Dividends" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Otros:</td>
+                <td colspan="3"><input type="text" name="RS_Others" class="input-text"></td>
+            </tr>
+            <tr class="sub-header">
+                <td colspan="4">Referencia Bancaria</td>
+            </tr>
+            <tr>
+                <td>Nombre de la Institución:</td>
+                <td><input type="text" name="Bank1_Ref_Name" class="input-text"></td>
+                <td>País:</td>
+                <td><input type="text" name="Bank1_Ref_Country" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Persona Contacto:</td>
+                <td><input type="text" name="Bank1_Ref_Contact" class="input-text"></td>
+                <td>Teléfono:</td>
+                <td><input type="text" name="Bank1_Ref_Phone" class="input-text"></td>
+            </tr>
+            <!-- Additional bank references can be added here -->
+            <tr class="sub-header">
+                <td colspan="4">Depósito Inicial</td>
+            </tr>
+            <tr>
+                <td>Usted estará depositando o transfiriendo:</td>
+                <td><input type="checkbox" name="Initial_Deposit_Cash" value="1" class="checkbox"> Efectivo</td>
+                <td><input type="checkbox" name="Initial_Deposit_Non_Securities" value="1" class="checkbox"> No Títulos Valores</td>
+                <td><input type="checkbox" name="Initial_Deposit_Both" value="1" class="checkbox"> Ambos</td>
+            </tr>
+            <tr>
+                <td>Indique el Monto (USD):</td>
+                <td><input type="number" name="Initial_Deposit_USD_Amount" class="input-text"></td>
+                <td>Títulos Valores:</td>
+                <td><input type="number" name="Initial_Deposit_Securities_Amount" class="input-text"></td>
+            </tr>
+            <tr>
+                <td>Institución de donde Provienen los Fondos:</td>
+                <td><input type="text" name="Initial_Deposit_From1" class="input-text"></td>
+                <td>Tiempo de Relación con la Institución:</td>
+                <td><input type="text" name="Initial_Deposit_From1_Rel" class="input-text"></td>
+            </tr>
+            <!-- Additional initial deposit fields here -->
+            <tr class="sub-header">
+                <td colspan="4">Persona Políticamente Expuesta</td>
+            </tr>
+            <tr class="gray-section">
+                <td colspan="4">El cliente debe indicar expresamente si es Persona Políticamente Expuesta (PEP). Persona Políticamente Expuesta incluye, entre otros, una persona
+                    que desempeña o ha desempeñado funciones públicas prominentes dentro o fuera del país, tales como jefes de Estado o de Gobierno, políticos de alto
+                    nivel, funcionarios gubernamentales, judiciales u oficiales militares de alto nivel, ejecutivos de alto nivel de corporaciones que pertenecen al Estado,
+                    funcionarios importantes de partidos políticos. (En base a la definición establecida en Articulo 4 Ley 23/2015).</td>
+            </tr>
+            <tr>
+                <td>¿Es Ud. Una Persona Políticamente Expuesta (PEP)?</td>
+                <td><input type="radio" name="PEP" value="1" class="radio"> Sí</td>
+                <td><input type="radio" name="PEP" value="0" class="radio" checked> No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>¿Es Ud. Familiar Cercano (cónyuge o 1er grado consanguinidad) de PEP?</td>
+                <td><input type="radio" name="PEP_Close" value="1" class="radio"> Sí</td>
+                <td><input type="radio" name="PEP_Close" value="0" class="radio" checked> No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>¿Declara que en los últimos 5 años (según la definición) se considera como PEP?</td>
+                <td><input type="radio" name="PEP_Five" value="1" class="radio"> Sí</td>
+                <td><input type="radio" name="PEP_Five" value="0" class="radio" checked> No</td>
+                <td></td>
+            </tr>
+            <tr class="sub-header">
+                <td colspan="4">Comunicación (Seleccionar uno o varios campos)</td>
+            </tr>
+            <tr>
+                <td>Personas autorizadas para instruir órdenes:</td>
+                <td><input type="checkbox" name="Orders_Autorise_Owner" value="1" class="checkbox"> Titular</td>
+                <td><input type="checkbox" name="Orders_Autorise_Co_Owner" value="1" class="checkbox"> Cotitular</td>
+                <td><input type="checkbox" name="Orders_Autorise_Signatory" value="1" class="checkbox"> Firmante(s)</td>
+            </tr>
+            <tr>
+                <td>Autorizado a dar instrucción de envío y recepción de tìtulos y efectivo:</td>
+                <td><input type="checkbox" name="Send_receive_cash_Autorise_Owner" value="1" class="checkbox"> Titular</td>
+                <td><input type="checkbox" name="Send_receive_cash_Autorise_Co_Owner" value="1" class="checkbox"> Cotitular</td>
+                <td><input type="checkbox" name="Send_receive_cash__Autorise_Signatory" value="1" class="checkbox"> Firmante(s)</td>
+            </tr>
+            <tr>
+                <td>Las órdenes podrán ser colocadas por:</td>
+                <td><input type="checkbox" name="Orders_Mail" value="1" class="checkbox"> Correo</td>
+                <td><input type="checkbox" name="Orders_Documents" value="1" class="checkbox"> Documentos Escritos</td>
+                <td><input type="checkbox" name="Orders_Telephone" value="1" class="checkbox"> Vía Telefónica</td>
+            </tr>
+            <tr>
+                <td>Desea recibirlos con periodicidad:</td>
+                <td><input type="checkbox" name="Receive_Mensual" value="1" class="checkbox"> Mensual</td>
+                <td><input type="checkbox" name="Receive_Trimestral" value="1" class="checkbox"> Trimestral</td>
+                <td><input type="checkbox" name="Receive_Semestral" value="1" class="checkbox"> Semestral</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
