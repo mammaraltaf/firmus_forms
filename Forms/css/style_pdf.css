@@ -281,3 +281,25 @@ input[type=checkbox]:before {
 	color: #000;
 	font-weight: bold;
 }
+.checkboxes-group {
+	display: flex;
+	flex-direction: column;
+}
+.checkbox-block {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.checkbox-block p {
+	margin: 0 0 0 5px;
+}
+.horizontal-form-field {
+	display: flex;
+	align-items: center;
+}
+.form-control {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
