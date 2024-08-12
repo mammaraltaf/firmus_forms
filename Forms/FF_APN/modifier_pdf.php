@@ -1091,7 +1091,7 @@
 const numberCodeForm = document.querySelector('[data-number-code-form]');
 const numberCodeInputs = [...numberCodeForm.querySelectorAll('[data-number-code-input]')];
       function openPDF() {
-          window.open('../pdf/apn_pdf.php', '_blank');
+          window.open('../FF_APN/pdf/apn_pdf.php', '_blank');
       }
 
 // Event callbacks
