@@ -42,8 +42,8 @@
   ?>
   <body>
 <!--<input class="active5" name="btn_pdf" value="Download as PDF File " type="button" onclick="window.location.href='pdf/generate_pdf.php?id=-->
-<?php //echo $id; ?>
 <!--        '">-->
+<input type="hidden" id="idInput" value="<?php echo $id; ?>">
 <input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="window.print();">
 <input class="active5 no-print" name="btn_pdf" value="Testing PDF File" type="button" onclick="openPDF();">
 <form name="form1" method="POST" action="modif.php">
@@ -1091,7 +1091,8 @@
 const numberCodeForm = document.querySelector('[data-number-code-form]');
 const numberCodeInputs = [...numberCodeForm.querySelectorAll('[data-number-code-input]')];
       function openPDF() {
-          window.open('../FF_APN/pdf/apn_pdf.php', '_blank');
+          var id = document.getElementById('idInput').value; // or any way you get the id
+          window.open(`../FF_APN/pdf/apn_pdf.php?id=${id}`, '_blank');
       }
 
 // Event callbacks
