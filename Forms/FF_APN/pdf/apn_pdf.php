@@ -353,9 +353,9 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                         <input <?PHP if ($Contract_Type==0) echo "checked" ; ?> type="checkbox"  value="0" id="discrecional" style="vertical-align: middle;">
                         <span class="checkbox-below-span">Discrecional</span>
                     </td>
-                    <td class="row1" name="Part_Rel_Raison" value="<?PHP echo $Part_Rel_Raison ; ?>" type="text" style="width: 40%">
+                    <td class="row1" style="width: 40%">
                         <label>Explique por qué se considera parte relacionada:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="Part_Rel_Raison"><?PHP echo $Part_Rel_Raison ; ?></span>
                     </td>
                 </tr>
                 <tr class="form-section">
@@ -382,99 +382,99 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 30%" name="E_Name" value="<?PHP echo $E_Name ; ?>" type="text" class="table2-row1">
+                    <td style="width: 30%"  class="table2-row1">
                         <label>Nombre(s):</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Name"><?PHP echo $E_Name ; ?></span>
                     </td>
-                    <td style="width: 30%" name="E_surname"value="<?PHP echo $E_surname ; ?>" type="text" class="table2-row1">
+                    <td style="width: 30%" class="table2-row1">
                         <label>Apellido(s):</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_surname"><?PHP echo $E_surname ; ?></span>
                     </td>
-                    <td style="width: 20%" name ="E_Country" type= "text" value="<?PHP echo $E_Country ; ?>" class="table2-row1">
+                    <td style="width: 20%" class="table2-row1">
                         <label>Nacionalidad:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name ="E_Country"><?PHP echo $E_Country ; ?></span>
                     </td>
-                    <td style="width: 20%" name ="E_C_Status" value="<?PHP echo $E_C_Status ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%" class="table2-row1">
                         <label>Estado Civil:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name ="E_C_Status"><?PHP echo $E_C_Status ; ?></span>
                     </td>
                 </tr>
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 20%" name="E_ID_type" value="<?PHP echo $E_ID_type ; ?>" type="text" class="table2-row1">
                         <label>Tipo de Documento (ID):</label>
-                        <span class="below-span"></span>
+                    <td style="width: 20%" class="table2-row1">
+                    <span class="below-span" name="E_ID_type"><?PHP echo $E_ID_type ; ?></span>
                     </td>
-                    <td style="width: 20%" name ="E_ID_No" value="<?PHP echo $E_ID_No ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%" class="table2-row1">
                         <label>No. de Documento (ID):</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name ="E_ID_No"><?PHP echo $E_ID_No ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_ID_Expire_Date" value="<?PHP echo $E_ID_Expire_Date ; ?>" type="text" id="datepicker" class="table2-row1">
+                    <td style="width: 20%"  class="table2-row1">
                         <label>Fecha de Vencimiento (ID):</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" id="datepicker" name="E_ID_Expire_Date"><?PHP echo $E_ID_Expire_Date ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Birth_Date" value="<?PHP echo $E_Birth_Date ; ?>" type="text" id="datepicker1" class="table2-row1">
+                    <td style="width: 20%"  class="table2-row1">
                         <label>Fecha de Nacimiento:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Birth_Date" id="datepicker1"><?PHP echo $E_Birth_Date ; ?>"</span>
                     </td>
-                    <td style="width: 20%" name="E_Birth_Place" value="<?PHP echo $E_Birth_Place ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%"  class="table2-row1">
                         <label>Lugar de Nacimiento:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span"name="E_Birth_Place"><?PHP echo $E_Birth_Place ; ?></span>
                     </td>
                 </tr>
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 60%" name="E_Email" value="<?PHP echo $E_Email ; ?>" type="text" class="table2-row1">
+                    <td style="width: 60%" class="table2-row1">
                         <label>Correo Electrónico:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span"name="E_Email"><?PHP echo $E_Email ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Profession" value="<?PHP echo $E_Profession ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%" class="table2-row1">
                         <label>Profesión u Oficio:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Profession"><?PHP echo $E_Profession ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Profession_Current" value="<?PHP echo $E_Profession_Current ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%"  class="table2-row1">
                         <label>Ocupación Actual:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Profession_Current"><?PHP echo $E_Profession_Current ; ?></span>
                     </td>
                 </tr>
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 40%" name="E_Home_Adress" value="<?PHP echo $E_Home_Adress ; ?>" type="text" class="table2-row1">
+                    <td style="width: 40%"  class="table2-row1">
                         <label>Domicilio Personal:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Home_Adress"><?PHP echo $E_Home_Adress ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Home_Adress_Number" value="<?PHP echo $E_Home_Adress_Number ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%" class="table2-row1">
                         <label>Nº de Domicilio / Casa:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Home_Adress_Number"><<?PHP echo $E_Home_Adress_Number ; ?>/span>
                     </td>
-                    <td style="width: 20%" Name="E_Home_Postal_Adress" value="<?PHP echo $E_Home_Postal_Adress ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%" class="table2-row1">
                         <label>Dirección Postal:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" Name="E_Home_Postal_Adress"><?PHP echo $E_Home_Postal_Adress ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Home_Fax" value="<?PHP echo $E_Home_Fax ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%" class="table2-row1">
                         <label>Fax:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Home_Fax"><?PHP echo $E_Home_Fax ; ?></span>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 40%" name="E_Office_Adress" value="<?PHP echo $E_Office_Adress ; ?>" type="text" class="table2-row1">
+                    <td style="width: 40%"  class="table2-row1">
                         <label>Domicilio Laboral:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Office_Adress"><?PHP echo $E_Office_Adress ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Office_Number" value="<?PHP echo $E_Office_Number ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%"  class="table2-row1">
                         <label>Nº de Oficina:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Office_Number"><?PHP echo $E_Office_Number ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Office_Postal_Adress" value="<?PHP echo $E_Office_Postal_Adress ; ?>" type="text"  class="table2-row1">
+                    <td style="width: 20%"  class="table2-row1">
                         <label>Dirección Postal:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Office_Postal_Adress"><?PHP echo $E_Office_Postal_Adress ; ?></span>
                     </td>
-                    <td style="width: 20%" name="E_Office_Fax" value="<?PHP echo $E_Office_Fax ; ?>" type="text" class="table2-row1">
+                    <td style="width: 20%"  class="table2-row1">
                         <label>Fax:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Office_Fax"><?PHP echo $E_Office_Fax ; ?></span>
                     </td>
                 </tr>
             </table>
@@ -509,9 +509,9 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                         <input name="E_Salary_Variable" <?PHP if($E_Salary_Variable==1) echo "checked" ; ?> type="checkbox" value="1" id="Variable" style="vertical-align: middle; padding-left: 30px">
                         <span class="checkbox-below-span">Variable</span>
                     </td>
-                    <td style="width: 4%; padding-top: 5px" name="E_Salary_Other" value="<?PHP echo $E_Salary_Other ; ?>" type="text">Otro:</td>
+                    <td style="width: 4%; padding-top: 5px">Otro:</td>
                     <td style="width: 56%">
-                        <span class="below-span"></span>
+                        <span class="below-span" name="E_Salary_Other"><?PHP echo $E_Salary_Other ; ?></span>
                     </td>
                 </tr>
 
@@ -523,8 +523,8 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 5px">1-</td>
-                    <td style="width: 32%; margin-right: 3px" name="Funds_Source1" value="<?PHP echo $Funds_Source1 ; ?>" type="text">
-                        <span class="below-span"></span>
+                    <td style="width: 32%; margin-right: 3px" >
+                        <span class="below-span" name="Funds_Source1"><?PHP echo $Funds_Source1 ; ?></span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
@@ -549,8 +549,8 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 5px">2-</td>
-                    <td style="width: 32%; margin-right: 3px" name="Funds_Source2" value="<?PHP echo $Funds_Source2 ; ?>" type="text">
-                        <span class="below-span"></span>
+                    <td style="width: 32%; margin-right: 3px" >
+                        <span class="below-span" name="Funds_Source2">"<?PHP echo $Funds_Source2 ; ?></span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
@@ -577,23 +577,23 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             </table>
             <div class="form-subheader" style="margin-top: -5px">Fuente de los Recursos o Patrimonio</div>
             <table style="margin-left: -5px !important;">
-                <td style="width: 25%; padding-top: 5px" name="RS_Employer_name" value="<?PHP echo $RS_Employer_name ; ?>" type="text">Nombre del Empleador / Independiente:</td>
+                <td style="width: 25%; padding-top: 5px">Nombre del Empleador / Independiente:</td>
                 <td style="width: 40%;">
-                    <span class="below-span" style="margin-right: 4px"></span>
+                    <span class="below-span" style="margin-right: 4px" name="RS_Employer_name" ><?PHP echo $RS_Employer_name ; ?></span>
                 </td>
-                <td style="width: 14%; padding-top: 5px" name="RS_Annual_Income_USD" value="<?PHP echo $RS_Annual_Income_USD ; ?>" type="text">Ingreso Anual: (USD):</td>
+                <td style="width: 14%; padding-top: 5px">Ingreso Anual: (USD):</td>
                 <td style="width: 15%; margin-right: 3px">
-                    <span class="below-span"></span>
+                    <span class="below-span" name="RS_Annual_Income_USD" ><?PHP echo $RS_Annual_Income_USD ; ?></span>
                 </td>
             </table>
             <table style="margin-left: -5px !important;">
-                <td style="width: 13%; padding-top: 5px" name="RS_Annual_Salary_USD" value="<?PHP echo $RS_Annual_Salary_USD ; ?>" type="text">Salario Anual: (USD):</td>
+                <td style="width: 13%; padding-top: 5px">Salario Anual: (USD):</td>
                 <td style="width: 15%;">
-                    <span class="below-span" style="margin-right: 4px"></span>
+                    <span class="below-span" name="RS_Annual_Salary_USD" style="margin-right: 4px"><?PHP echo $RS_Annual_Salary_USD ; ?></span>
                 </td>
-                <td style="width: 13%; padding-top: 5px" name="RS_Years_in_Company" value="<?PHP echo $RS_Years_in_Company ; ?>" type="text">Años en la Empresa:</td>
+                <td style="width: 13%; padding-top: 5px">Años en la Empresa:</td>
                 <td style="width: 5%; margin-right: 3px">
-                    <span class="below-span"></span>
+                    <span class="below-span" name="RS_Years_in_Company"><?PHP echo $RS_Years_in_Company ; ?></span>
                 </td>
                 <td style="width: 10%; padding-top: 8px; padding-left: 30%">Actividad:</td>
                 <td style="width: 20%" class="table2-row1">
@@ -624,13 +624,13 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                         <input name="RS_Activity_Pension1" <?PHP if ($RS_Activity_Pension1==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario"style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Salario </span>
                     </td>
-                    <td style="width: 15%; padding-top: 5px" name="RS_Investment_Dividends"  value="<?PHP echo $RS_Investment_Dividends ; ?>" type="text">Dividendos de Inversión:</td>
+                    <td style="width: 15%; padding-top: 5px" >Dividendos de Inversión:</td>
                     <td style="width: 15%; margin-right: 3px">
-                        <span class="below-span"></span>
+                        <span class="below-span" name="RS_Investment_Dividends"><?PHP echo $RS_Investment_Dividends ; ?></span>
                     </td>
-                    <td style="width: 5%; padding-top: 5px; padding-left: 20%" name="RS_Others" value="<?PHP echo $RS_Others ; ?>" type="text">Otros:</td>
+                    <td style="width: 5%; padding-top: 5px; padding-left: 20%">Otros:</td>
                     <td style="width: 15%; margin-right: 3px">
-                        <span class="below-span"></span>
+                        <span class="below-span" name="RS_Others"><?PHP echo $RS_Others ; ?></span>
                     </td>
                 </tr>
             </table>
@@ -653,47 +653,47 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             <table style="margin-left: -5px !important;">
                 <tr>
                     <td style="width: 2%; padding-top: 10px">1-</td>
-                    <td style="width: 38%" name="Bank1_Ref_Name"  value="<?PHP echo $Bank1_Ref_Name ; ?>" type="text"class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 38%"  class="table2-row1">
+                        <span class="below-span" name="Bank1_Ref_Name"><?PHP echo $Bank1_Ref_Name ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank1_Ref_Country" value="<?PHP echo $Bank1_Ref_Country ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"  class="table2-row1">
+                        <span class="below-span" name="Bank1_Ref_Country"><?PHP echo $Bank1_Ref_Country ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank1_Ref_Contact" value="<?PHP echo $Bank1_Ref_Contact ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"  class="table2-row1">
+                        <span class="below-span" name="Bank1_Ref_Contact"><?PHP echo $Bank1_Ref_Contact ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank1_Ref_Phone" value="<?PHP echo $Bank1_Ref_Phone ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"  class="table2-row1">
+                        <span class="below-span" name="Bank1_Ref_Phone"><?PHP echo $Bank1_Ref_Phone ; ?></span>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 10px" >2-</td>
-                    <td style="width: 38%" name="Bank2_Ref_Name" value="<?PHP echo $Bank2_Ref_Name ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 38%"  class="table2-row1">
+                        <span class="below-span" name="Bank2_Ref_Name"><?PHP echo $Bank2_Ref_Name ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank2_Ref_Country" value="<?PHP echo $Bank2_Ref_Country ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"  class="table2-row1">
+                        <span class="below-span" name="Bank2_Ref_Country"><?PHP echo $Bank2_Ref_Country ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank2_Ref_Contact" value="<?PHP echo $Bank2_Ref_Contact ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"  class="table2-row1">
+                        <span class="below-span" name="Bank2_Ref_Contact"><?PHP echo $Bank2_Ref_Contact ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank2_Ref_Phone" value="<?PHP echo $Bank2_Ref_Phone ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"  class="table2-row1">
+                        <span class="below-span" name="Bank2_Ref_Phone"><?PHP echo $Bank2_Ref_Phone ; ?></span>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 10px">3-</td>
-                    <td style="width: 38%" name="Bank3_Ref_Name" value="<?PHP echo $Bank3_Ref_Name ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 38%"  class="table2-row1">
+                        <span class="below-span" name="Bank3_Ref_Name"><?PHP echo $Bank3_Ref_Name ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank3_Ref_Country" value="<?PHP echo $Bank3_Ref_Country ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"   class="table2-row1">
+                        <span class="below-span" name="Bank3_Ref_Country"><?PHP echo $Bank3_Ref_Country ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank3_Ref_Contact" value="<?PHP echo $Bank3_Ref_Contact ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%"  class="table2-row1">
+                        <span class="below-span" name="Bank3_Ref_Contact"><?PHP echo $Bank3_Ref_Contact ; ?></span>
                     </td>
-                    <td style="width: 20%" name="Bank3_Ref_Phone" value="<?PHP echo $Bank3_Ref_Phone ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 20%" class="table2-row1">
+                        <span class="below-span"  name="Bank3_Ref_Phone"><?PHP echo $Bank3_Ref_Phone ; ?></span>
                     </td>
                 </tr>
             </table>
@@ -708,12 +708,12 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 <tr>
                     <td style="width: 14%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input name="Initial_Deposit_Cash"  <?PHP if ($Initial_Deposit_Cash==1) echo "checked"  ; ?> type="checkbox" value="1" id="Efectivo">style="vertical-align: middle;">
+                        <input name="Initial_Deposit_Cash"  <?PHP if ($Initial_Deposit_Cash==1) echo "checked"  ; ?> type="checkbox" value="1" id="Efectivo" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Efectivo </span>
                     </td>
                     <td style="width: 14%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input name="Initial_Deposit_Non_Securities"  <?PHP if ($Initial_Deposit_Non_Securities==1) echo "checked"  ; ?> type="checkbox" value="1" id="Títulos-Valores"style="vertical-align: middle;">
+                        <input name="Initial_Deposit_Non_Securities"  <?PHP if ($Initial_Deposit_Non_Securities==1) echo "checked"  ; ?> type="checkbox" value="1" id="Títulos-Valores" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Títulos Valores </span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
@@ -722,12 +722,12 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                         <span class="checkbox-below-span"> Ambos </span>
                     </td>
                     <td style="width: 10%; padding-top: 10px">Efectivo:</td>
-                    <td style="width: 15%" name="Initial_Deposit_USD_Amount" value="<?PHP echo $Initial_Deposit_USD_Amount ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 15%"  class="table2-row1">
+                        <span class="below-span" name="Initial_Deposit_USD_Amount"><<?PHP echo $Initial_Deposit_USD_Amount ; ?>/span>
                     </td>
                     <td style="width: 15%; padding-top: 10px">Títulos Valores:</td>
-                    <td style="width: 15%" name="Initial_Deposit_Securities_Amount" value="<?PHP echo $Initial_Deposit_Securities_Amount ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 15%"  class="table2-row1">
+                        <span class="below-span" name="Initial_Deposit_Securities_Amount"><?PHP echo $Initial_Deposit_Securities_Amount ; ?></span>
                     </td>
                 </tr>
             </table>
@@ -740,12 +740,12 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             <table style="margin-left: -5px !important;">
                 <tr>
                     <td style="width: 2%; padding-top: 10px">1-</td>
-                    <td style="width: 48%" name="Initial_Deposit_From1"  type="text" value="<?PHP echo $Initial_Deposit_From1 ; ?>" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 48%"  class="table2-row1">
+                        <span class="below-span" name="Initial_Deposit_From1"><?PHP echo $Initial_Deposit_From1 ; ?></span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input name="Initial_Deposit_From1_Cash"  type="checkbox" value="1" <?PHP if ($Initial_Deposit_From1_Cash==1) echo "checked"  ; ?>   id="Efectivo" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_From1_Cash"  name="Initial_Deposit_Cash"  <?PHP if ($Initial_Deposit_Cash==1) echo "checked"  ; ?> type="checkbox" value="1" id="Efectivo" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Efectivo </span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
@@ -753,14 +753,14 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                         <input name="Initial_Deposit_From1_Securities" type="checkbox" value="1"  <?PHP if ($Initial_Deposit_From1_Securities==1) echo "checked"  ; ?>    id="Títulos" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Títulos </span>
                     </td>
-                    <td style="width: 30%" name="Initial_Deposit_From1_Rel"   type="text" value="<?PHP echo $Initial_Deposit_From1_Rel; ?>" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 30%"  class="table2-row1">
+                        <span class="below-span" name="Initial_Deposit_From1_Rel"><?PHP echo $Initial_Deposit_From1_Rel; ?></span>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 10px">2-</td>
-                    <td style="width: 48%" name="Initial_Deposit_From2" type="text"  value="<?PHP echo $Initial_Deposit_From2 ; ?>" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 48%"  class="table2-row1">
+                        <span class="below-span" name="Initial_Deposit_From2"><?PHP echo $Initial_Deposit_From2 ; ?></span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
@@ -772,8 +772,8 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                         <input name="Initial_Deposit_From2_Securities"   type="checkbox" value="1"  <?PHP if ($Initial_Deposit_From2_Securities==1) echo "checked"  ; ?>   id="Títulos3" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Títulos </span>
                     </td>
-                    <td style="width: 30%" name="Initial_Deposit_From2_Rel" type="text"  value="<?PHP echo $Initial_Deposit_From2_Rel; ?>" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 30%"  class="table2-row1">
+                        <span class="below-span" name="Initial_Deposit_From2_Rel"><?PHP echo $Initial_Deposit_From2_Rel; ?></span>
                     </td>
                 </tr>
             </table>
@@ -833,7 +833,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 <td style="width: 80%; padding-top: 10px">¿Es Ud. Una Persona Políticamente Expuesta (PEP)?</td>
                 <td style="width: 10%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" name="PEP" <?PHP if ($PEP==1) echo "checked"  ; ?> type="radio" value="1" id="Salario" style="vertical-align: middle;">
+                    <input type="checkbox" name="PEP" <?PHP if ($PEP==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td style="width: 10%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
@@ -1025,6 +1025,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                     de Firmus-Octogone Inc. a su disposicion y solicitud
                 </td>
                 <td style="padding-top: 10px; padding-left: 7px" width="10%">Si</td>
+                
                 <td style="padding-top: 10px; padding-left: 7px" width="10%">No</td>
             </tr>
             <tr class="row-background-style">
@@ -1105,8 +1106,8 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 <td style="padding-top: 10px; width: 50%">Firmus-Octogone Inc. tomará como correo autorizado el declarado en
                     Datos Generales, de ser diferente suministrar el mismo:
                 </td>
-                <td class="table2-row1" name="General_Data" value="<?PHP echo $General_Data ; ?>" type="text" style="width: 50%">
-                    <span class="below-span" style="margin-top: 8px; position: relative; "></span>
+                <td class="table2-row1" style="width: 50%">
+                    <span class="below-span" name="General_Data" style="margin-top: 8px; position: relative; "><?PHP echo $General_Data ; ?></span>
                 </td>
             </tr>
         </table>
@@ -1180,28 +1181,28 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 45%" name="Full_name1" value="<?PHP echo $Full_name1 ; ?>" type="text" class="table2-row1">
+                    <td style="width: 45%"  class="table2-row1">
                         <label>Nombre completo (en imprenta):</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="Full_name1"><?PHP echo $Full_name1 ; ?></span>
                     </td>
                     <td width="10%"></td>
-                    <td style="width: 45%" name="Full_name2" value="<?PHP echo $Full_name2 ; ?>" type="text" class="table2-row1">
+                    <td style="width: 45%"  class="table2-row1">
                         <label>Nombre completo (en imprenta):</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="Full_name2"><?PHP echo $Full_name2 ; ?></span>
                     </td>
                 </tr>
             </table>
             <table>
                 <tr>
                     <td style="width: 15%; padding-top: 10px">No. de Documento (ID):</td>
-                    <td style="width: 30%" name="Document1_ID"  value="<?PHP echo $Document1_ID ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 30%"   class="table2-row1">
+                        <span class="below-span" name="Document1_ID" ><?PHP echo $Document1_ID ; ?></span>
                     </td>
                     <td width="10%"></td>
                     <
                     <td style="width: 15%; padding-top: 10px">No. de Documento (ID):</td>
-                    <td style="width: 30%" name="Document2_ID" value="<?PHP echo $Document2_ID ; ?>" type="text" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 30%"   class="table2-row1">
+                        <span class="below-span" name="Document2_ID"><?PHP echo $Document2_ID ; ?></span>
                     </td>
                 </tr>
             </table>
@@ -1209,14 +1210,14 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 <tr>
                     <td width="25%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" name="Signature1_Date" value="<?PHP echo $Signature1_Date ; ?>" type="text" id="datepicker2" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 15%"  class="table2-row1">
+                        <span class="below-span" name="Signature1_Date" id="datepicker2"><?PHP echo $Signature1_Date ; ?></span>
                     </td>
                     <td width="10%"></td>
                     <td width="25%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" name="Signature2_Date" value="<?PHP echo $Signature2_Date ; ?>" type="text" id="datepicker3" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 15%"  class="table2-row1">
+                        <span class="below-span" name="Signature2_Date" id="datepicker3" ><?PHP echo $Signature2_Date ; ?></span>
                     </td>
                 </tr>
             </table>
@@ -1236,19 +1237,19 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             <div class="form-subheader" style="margin-top: 15px">Firma (s) Cliente (s</div>
             <table style="margin-left: -5px !important; margin-top: 15px">
                 <tr>
-                    <td style="width: 30%" name="Runners_Name" value="<?PHP echo $Runners_Name ; ?>" type="text" class="table2-row1">
+                    <td style="width: 30%" class="table2-row1">
                         <label>Nombre del Corredor:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="Runners_Name"><?PHP echo $Runners_Name ; ?></span>
                     </td>
                     <td width="5%"></td>
-                    <td style="width: 30%" name="Compliance_Officer_Name" value="<?PHP echo $Compliance_Officer_Name ; ?>" type="text" class="table2-row1">
+                    <td style="width: 30%" class="table2-row1">
                         <label>Nombre del Oficial de Cumplimiento:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span" name="Compliance_Officer_Name"><?PHP echo $Compliance_Officer_Name ; ?></span>
                     </td>
                     <td width="5%"></td>
-                    <td style="width: 30%" name="Chief_Executive_Name" value="<?PHP echo $Chief_Executive_Name ; ?>" type="text" class="table2-row1">
+                    <td style="width: 30%" class="table2-row1">
                         <label>Nombre del Ejecutivo Principal:</label>
-                        <span class="below-span"></span>
+                        <span class="below-span"  name="Chief_Executive_Name"><?PHP echo $Chief_Executive_Name ; ?></span>
                     </td>
                 </tr>
             </table>
@@ -1256,20 +1257,20 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 <tr>
                     <td width="10%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" name="Runners_Date"  value="<?PHP echo $Runners_Date ; ?>" type="text" id="datepicker4" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 15%" class="table2-row1">
+                        <span class="below-span" name="Runners_Date" id="datepicker4"><?PHP echo $Runners_Date ; ?></span>
                     </td>
                     <td width="5%"></td>
                     <td width="15%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" name="Compliance__Officer_Date" value="<?PHP echo $Compliance__Officer_Date ; ?>" id="datepicker5" type="text" class="form-control" class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 15%"  class="table2-row1">
+                        <span class="below-span"  name="Compliance__Officer_Date" id="datepicker5"><?PHP echo $Compliance__Officer_Date ; ?></span>
                     </td>
                     <td width="5%"></td>
                     <td width="15%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" name="Chief_Executive_Date" value="<?PHP echo $Chief_Executive_Date ; ?>" type="text" id="datepicker6"  class="table2-row1">
-                        <span class="below-span"></span>
+                    <td style="width: 15%" class="table2-row1">
+                        <span class="below-span" name="Chief_Executive_Date" id="datepicker6" ><?PHP echo $Chief_Executive_Date ; ?></span>
                     </td>
                 </tr>
             </table>
