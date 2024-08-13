@@ -448,7 +448,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                     </td>
                     <td style="width: 20%" class="table2-row1">
                         <label>Nº de Domicilio / Casa:</label>
-                        <span class="below-span" name="E_Home_Adress_Number"><<?PHP echo $E_Home_Adress_Number ; ?>/span>
+                        <span class="below-span" name="E_Home_Adress_Number"><?PHP echo $E_Home_Adress_Number ; ?></span>
                     </td>
                     <td style="width: 20%" class="table2-row1">
                         <label>Dirección Postal:</label>
@@ -723,7 +723,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                     </td>
                     <td style="width: 10%; padding-top: 10px">Efectivo:</td>
                     <td style="width: 15%"  class="table2-row1">
-                        <span class="below-span" name="Initial_Deposit_USD_Amount"><<?PHP echo $Initial_Deposit_USD_Amount ; ?>/span>
+                        <span class="below-span" name="Initial_Deposit_USD_Amount"><?PHP echo $Initial_Deposit_USD_Amount ; ?></span>
                     </td>
                     <td style="width: 15%; padding-top: 10px">Títulos Valores:</td>
                     <td style="width: 15%"  class="table2-row1">
@@ -1025,7 +1025,6 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                     de Firmus-Octogone Inc. a su disposicion y solicitud
                 </td>
                 <td style="padding-top: 10px; padding-left: 7px" width="10%">Si</td>
-                
                 <td style="padding-top: 10px; padding-left: 7px" width="10%">No</td>
             </tr>
             <tr class="row-background-style">
@@ -1036,7 +1035,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input name="Autorise_Firmus" <?PHP if ($Autorise_Firmus==1) echo "checked" ; ?> type="checkbox" value="1" id="No" style="position: relative; margin-top: -20px; vertical-align: middle;">
+                    <input name="Autorise_Firmus" <?PHP if ($Autorise_Firmus==0) echo "checked" ; ?> type="checkbox" value="1" id="No" style="position: relative; margin-top: -20px; vertical-align: middle;">
                 </td>
             </tr>
         </table>
@@ -1199,7 +1198,6 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                         <span class="below-span" name="Document1_ID" ><?PHP echo $Document1_ID ; ?></span>
                     </td>
                     <td width="10%"></td>
-                    <
                     <td style="width: 15%; padding-top: 10px">No. de Documento (ID):</td>
                     <td style="width: 30%"   class="table2-row1">
                         <span class="below-span" name="Document2_ID"><?PHP echo $Document2_ID ; ?></span>
