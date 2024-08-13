@@ -167,11 +167,16 @@ ob_start();
             }    </style>
         <title>DOCUMENT</title>
     </head>
+    <?php
+  require 'edit_pdf_data.php';
+  ?>
     <body>
+    <form name="form1" method="POST" action="modif.php">
+	<?PHP echo "<input type=hidden name=id value=$id>"; ?>
     <div class="container">
         <div class="header">
             <svg>
-                <img src="<?php echo $base64; ?>" alt="logo" style="width: 150px;">
+                <img src="../images/logo.svg" alt="Firmus Financial" class="img-fluid" style="width: 150px;">
             </svg>
         </div>
 
@@ -186,15 +191,15 @@ ob_start();
                     <td class="form-section-first-row-td" style="width: 20%">Tipo de Cuenta o Contrato:</td>
                     <td class="form-section-first-row-td" style="width: 20%">
                         <span class="checkbox-up-span" style=""></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Contract_Type" <?PHP if ($Contract_Type==1) echo "checked" ; ?> type="checkbox" value="1" id="no-discrecional"  style="vertical-align: middle;">
                         <span class="checkbox-below-span">No Discrecional</span>
                     </td>
                     <td class="form-section-first-row-td" style="width: 20%">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input <?PHP if ($Contract_Type==0) echo "checked" ; ?> type="checkbox"  value="0" id="discrecional" style="vertical-align: middle;">
                         <span class="checkbox-below-span">Discrecional</span>
                     </td>
-                    <td class="row1" style="width: 40%">
+                    <td class="row1" name="Part_Rel_Raison" value="<?PHP echo $Part_Rel_Raison ; ?>" type="text" style="width: 40%">
                         <label>Explique por qué se considera parte relacionada:</label>
                         <span class="below-span"></span>
                     </td>
@@ -206,7 +211,7 @@ ob_start();
                     <td>
                     <span class="checkbox-up-span" style="display: inline-block; margin-top: -15px; padding-bottom: -10px;
                         position: relative; top: -15px;"></span>
-                        <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                        <input name="Part_Rel" <?PHP if ($Part_Rel==1) echo "checked" ; ?> type="radio" value="1" id="si" style="vertical-align: middle; display: inline-block;
                         margin-top: -15px; padding-bottom: -10px; position: relative; top: -15px;">
                         <span class="checkbox-below-span" style="display: inline-block; margin-top: -15px; padding-bottom: -10px;
                         position: relative; top: -15px;">Sí</span>
@@ -214,7 +219,7 @@ ob_start();
                     <td>
                     <span class="checkbox-up-span" style="display: inline-block; margin-top: -15px; padding-bottom: -10px;
                         position: relative; top: -15px;"></span>
-                        <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                        <input name="Part_Rel" <?PHP if ($Part_Rel==0) echo "checked" ; ?> type="radio" value="0" id="no" style="vertical-align: middle; display: inline-block;
                         margin-top: -15px; padding-bottom: -10px; position: relative; top: -15px;">
                         <span class="checkbox-below-span" style="display: inline-block; margin-top: -15px; padding-bottom: -10px;
                         position: relative; top: -15px;">No</span>
@@ -223,19 +228,19 @@ ob_start();
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="E_Name" value="<?PHP echo $E_Name ; ?>" type="text" class="table2-row1">
                         <label>Nombre(s):</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="E_surname"value="<?PHP echo $E_surname ; ?>" type="text" class="table2-row1">
                         <label>Apellido(s):</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name ="E_Country" type= "text" value="<?PHP echo $E_Country ; ?>" class="table2-row1">
                         <label>Nacionalidad:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name ="E_C_Status" value="<?PHP echo $E_C_Status ; ?>" type="text" class="table2-row1">
                         <label>Estado Civil:</label>
                         <span class="below-span"></span>
                     </td>
@@ -243,23 +248,23 @@ ob_start();
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_ID_type" value="<?PHP echo $E_ID_type ; ?>" type="text" class="table2-row1">
                         <label>Tipo de Documento (ID):</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name ="E_ID_No" value="<?PHP echo $E_ID_No ; ?>" type="text" class="table2-row1">
                         <label>No. de Documento (ID):</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_ID_Expire_Date" value="<?PHP echo $E_ID_Expire_Date ; ?>" type="text" id="datepicker" class="table2-row1">
                         <label>Fecha de Vencimiento (ID):</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Birth_Date" value="<?PHP echo $E_Birth_Date ; ?>" type="text" id="datepicker1" class="table2-row1">
                         <label>Fecha de Nacimiento:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Birth_Place" value="<?PHP echo $E_Birth_Place ; ?>" type="text" class="table2-row1">
                         <label>Lugar de Nacimiento:</label>
                         <span class="below-span"></span>
                     </td>
@@ -267,15 +272,15 @@ ob_start();
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 60%" class="table2-row1">
+                    <td style="width: 60%" name="E_Email" value="<?PHP echo $E_Email ; ?>" type="text" class="table2-row1">
                         <label>Correo Electrónico:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Profession" value="<?PHP echo $E_Profession ; ?>" type="text" class="table2-row1">
                         <label>Profesión u Oficio:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Profession_Current" value="<?PHP echo $E_Profession_Current ; ?>" type="text" class="table2-row1">
                         <label>Ocupación Actual:</label>
                         <span class="below-span"></span>
                     </td>
@@ -283,37 +288,37 @@ ob_start();
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 40%" class="table2-row1">
+                    <td style="width: 40%" name="E_Home_Adress" value="<?PHP echo $E_Home_Adress ; ?>" type="text" class="table2-row1">
                         <label>Domicilio Personal:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Home_Adress_Number" value="<?PHP echo $E_Home_Adress_Number ; ?>" type="text" class="table2-row1">
                         <label>Nº de Domicilio / Casa:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" Name="E_Home_Postal_Adress" value="<?PHP echo $E_Home_Postal_Adress ; ?>" type="text" class="table2-row1">
                         <label>Dirección Postal:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Home_Fax" value="<?PHP echo $E_Home_Fax ; ?>" type="text" class="table2-row1">
                         <label>Fax:</label>
                         <span class="below-span"></span>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 40%" class="table2-row1">
+                    <td style="width: 40%" name="E_Office_Adress" value="<?PHP echo $E_Office_Adress ; ?>" type="text" class="table2-row1">
                         <label>Domicilio Laboral:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Office_Number" value="<?PHP echo $E_Office_Number ; ?>" type="text" class="table2-row1">
                         <label>Nº de Oficina:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Office_Postal_Adress" value="<?PHP echo $E_Office_Postal_Adress ; ?>" type="text"  class="table2-row1">
                         <label>Dirección Postal:</label>
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="E_Office_Fax" value="<?PHP echo $E_Office_Fax ; ?>" type="text" class="table2-row1">
                         <label>Fax:</label>
                         <span class="below-span"></span>
                     </td>
@@ -324,17 +329,17 @@ ob_start();
                     <td style="width: 40%" class="table2-row1">Empleado con Salario:</td>
                     <td style="width: 20%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="E_Salary_Independ" <?PHP if ($E_Salary_Independ ==1) echo "checked" ; ?>  type="checkbox" value="1" id="Independiente" style="vertical-align: middle;">
                         <span class="checkbox-below-span">Independiente</span>
                     </td>
                     <td style="width: 20%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="E_Salary_NotRetired" type="checkbox" value="1"  <?PHP if ($E_Salary_NotRetired ==1) echo "checked" ; ?>  id="Jubilado" style="vertical-align: middle;">
                         <span class="checkbox-below-span">Jubilado</span>
                     </td>
                     <td style="width: 20%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="E_Salary_NotPensioned" <?PHP if ($E_Salary_NotPensioned ==1) echo "checked" ; ?> type="checkbox" value="1" id="Pensionado"style="vertical-align: middle;">
                         <span class="checkbox-below-span">Pensionado</span>
                     </td>
                 </tr>
@@ -343,14 +348,14 @@ ob_start();
                 <tr>
                     <td style="width: 40%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="E_Salary_Fixed" <?PHP if ($E_Salary_Fixed==1) echo "checked"; ?> type="checkbox" value="1" id="fijo" style="vertical-align: middle;">
                         <span class="checkbox-below-span">Fijo</span>
 
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle; padding-left: 30px">
+                        <input name="E_Salary_Variable" <?PHP if($E_Salary_Variable==1) echo "checked" ; ?> type="checkbox" value="1" id="Variable" style="vertical-align: middle; padding-left: 30px">
                         <span class="checkbox-below-span">Variable</span>
                     </td>
-                    <td style="width: 4%; padding-top: 5px">Otro:</td>
+                    <td style="width: 4%; padding-top: 5px" name="E_Salary_Other" value="<?PHP echo $E_Salary_Other ; ?>" type="text">Otro:</td>
                     <td style="width: 56%">
                         <span class="below-span"></span>
                     </td>
@@ -364,86 +369,87 @@ ob_start();
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 5px">1-</td>
-                    <td style="width: 32%; margin-right: 3px">
+                    <td style="width: 32%; margin-right: 3px" name="Funds_Source1" value="<?PHP echo $Funds_Source1 ; ?>" type="text">
                         <span class="below-span"></span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Funds_Source1_Type_Receive_Cash"  type="checkbox" value="1" <?PHP if($Funds_Source1_Type_Receive_Cash==1) echo "checked"  ; ?> id="Recibe-su-Efectivo" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Recibe su Efectivo </span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input  name="Funds_Source1_Type_Send_Cash"  <?PHP if($Funds_Source1_Type_Send_Cash==1) echo "checked"  ; ?> type="checkbox" value="1" id="Envía-su-Efectivo" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Envía su Efectivo </span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Funds_Source1_Type_Receive_Titles"  <?PHP if ($Funds_Source1_Type_Receive_Titles==1) echo "checked"  ; ?> type="checkbox" value="1" id="Recibe-sus-Títulos" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Recibe sus Títulos </span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Funds_Source1_Type_Submit_Titles" <?PHP if ($Funds_Source1_Type_Submit_Titles==1) echo "checked"  ; ?> type="checkbox" value="1" id="Envía-sus-Títulos" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Envía sus Títulos </span>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 5px">2-</td>
-                    <td style="width: 32%; margin-right: 3px">
+                    <td style="width: 32%; margin-right: 3px" name="Funds_Source2" value="<?PHP echo $Funds_Source2 ; ?>" type="text">
                         <span class="below-span"></span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input type="checkbox" value="1" id="Recibe-su-Efectivo2" name="Funds_Source2_Type_Receive_Cash" <?PHP if ($Funds_Source2_Type_Receive_Cash==1) echo "checked" ; ?> style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Recibe su Efectivo </span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input type="checkbox" name="Funds_Source2_Type_Send_Cash" type="checkbox" value="1" id="Envía-su-Efectivo2"
+                        <?PHP if ($Funds_Source2_Type_Send_Cash==1) echo "checked  "  ; ?> style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Envía su Efectivo </span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input tname="Funds_Source2_Type_Receive_Titles" <?PHP if($Funds_Source2_Type_Receive_Titles==1) echo "checked"  ; ?> type="checkbox" value="1" id="Recibe-sus-Títulos2" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Recibe sus Títulos </span>
                     </td>
                     <td style="width: 18%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input type="checkbox" name="Funds_Source2_Type_Submit_Titles" <?PHP if($Funds_Source2_Type_Submit_Titles==1) echo "checked"  ; ?> type="checkbox" value="1" id="Envía-sus-Títulos2" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Envía sus Títulos </span>
                     </td>
                 </tr>
             </table>
             <div class="form-subheader" style="margin-top: -5px">Fuente de los Recursos o Patrimonio</div>
             <table style="margin-left: -5px !important;">
-                <td style="width: 25%; padding-top: 5px">Nombre del Empleador / Independiente:</td>
+                <td style="width: 25%; padding-top: 5px" name="RS_Employer_name" value="<?PHP echo $RS_Employer_name ; ?>" type="text">Nombre del Empleador / Independiente:</td>
                 <td style="width: 40%;">
                     <span class="below-span" style="margin-right: 4px"></span>
                 </td>
-                <td style="width: 14%; padding-top: 5px">Ingreso Anual: (USD):</td>
+                <td style="width: 14%; padding-top: 5px" name="RS_Annual_Income_USD" value="<?PHP echo $RS_Annual_Income_USD ; ?>" type="text">Ingreso Anual: (USD):</td>
                 <td style="width: 15%; margin-right: 3px">
                     <span class="below-span"></span>
                 </td>
             </table>
             <table style="margin-left: -5px !important;">
-                <td style="width: 13%; padding-top: 5px">Salario Anual: (USD):</td>
+                <td style="width: 13%; padding-top: 5px" name="RS_Annual_Salary_USD" value="<?PHP echo $RS_Annual_Salary_USD ; ?>" type="text">Salario Anual: (USD):</td>
                 <td style="width: 15%;">
                     <span class="below-span" style="margin-right: 4px"></span>
                 </td>
-                <td style="width: 13%; padding-top: 5px">Años en la Empresa:</td>
+                <td style="width: 13%; padding-top: 5px" name="RS_Years_in_Company" value="<?PHP echo $RS_Years_in_Company ; ?>" type="text">Años en la Empresa:</td>
                 <td style="width: 5%; margin-right: 3px">
                     <span class="below-span"></span>
                 </td>
                 <td style="width: 10%; padding-top: 8px; padding-left: 30%">Actividad:</td>
                 <td style="width: 20%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="RS_Activity_Professional_fees" <?PHP if ($RS_Activity_Professional_fees==1) echo "checked"  ; ?> type="checkbox" value="1" id="Honorarios-Profesionales" style="vertical-align: middle;">
                     <span class="checkbox-below-span"> Honorarios Profesionales </span>
                 </td>
                 <td style="width: 15%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input type="checkbox" name="RS_Activity_Own_business"  <?PHP if ($RS_Activity_Own_business==1) echo "checked"  ; ?> type="checkbox" value="1" id="Negocio-Propio" style="vertical-align: middle;">
                     <span class="checkbox-below-span"> Negocio Propio </span>
                 </td>
             </table>
@@ -451,24 +457,24 @@ ob_start();
                 <tr>
                     <td style="width: 12%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input type="checkbox" name="RS_Activity_Saving" <?PHP if ($RS_Activity_Saving==1) echo "checked"  ; ?> type="checkbox" value="1" id="Ahorro" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Ahorro </span>
                     </td>
                     <td style="width: 12%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="RS_Activity_Pension" <?PHP if ($RS_Activity_Pension==1) echo "checked"  ; ?> type="checkbox" value="1" id="Pensión" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Pensión </span>
                     </td>
                     <td style="width: 12%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="RS_Activity_Pension1" <?PHP if ($RS_Activity_Pension1==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario"style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Salario </span>
                     </td>
-                    <td style="width: 15%; padding-top: 5px">Dividendos de Inversión:</td>
+                    <td style="width: 15%; padding-top: 5px" name="RS_Investment_Dividends"  value="<?PHP echo $RS_Investment_Dividends ; ?>" type="text">Dividendos de Inversión:</td>
                     <td style="width: 15%; margin-right: 3px">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 5%; padding-top: 5px; padding-left: 20%">Otros:</td>
+                    <td style="width: 5%; padding-top: 5px; padding-left: 20%" name="RS_Others" value="<?PHP echo $RS_Others ; ?>" type="text">Otros:</td>
                     <td style="width: 15%; margin-right: 3px">
                         <span class="below-span"></span>
                     </td>
@@ -493,46 +499,46 @@ ob_start();
             <table style="margin-left: -5px !important;">
                 <tr>
                     <td style="width: 2%; padding-top: 10px">1-</td>
-                    <td style="width: 38%" class="table2-row1">
+                    <td style="width: 38%" name="Bank1_Ref_Name"  value="<?PHP echo $Bank1_Ref_Name ; ?>" type="text"class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank1_Ref_Country" value="<?PHP echo $Bank1_Ref_Country ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank1_Ref_Contact" value="<?PHP echo $Bank1_Ref_Contact ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank1_Ref_Phone" value="<?PHP echo $Bank1_Ref_Phone ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 2%; padding-top: 10px">2-</td>
-                    <td style="width: 38%" class="table2-row1">
+                    <td style="width: 2%; padding-top: 10px" >2-</td>
+                    <td style="width: 38%" name="Bank2_Ref_Name" value="<?PHP echo $Bank2_Ref_Name ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank2_Ref_Country" value="<?PHP echo $Bank2_Ref_Country ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank2_Ref_Contact" value="<?PHP echo $Bank2_Ref_Contact ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank2_Ref_Phone" value="<?PHP echo $Bank2_Ref_Phone ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 10px">3-</td>
-                    <td style="width: 38%" class="table2-row1">
+                    <td style="width: 38%" name="Bank3_Ref_Name" value="<?PHP echo $Bank3_Ref_Name ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank3_Ref_Country" value="<?PHP echo $Bank3_Ref_Country ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank3_Ref_Contact" value="<?PHP echo $Bank3_Ref_Contact ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 20%" name="Bank3_Ref_Phone" value="<?PHP echo $Bank3_Ref_Phone ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
@@ -548,25 +554,25 @@ ob_start();
                 <tr>
                     <td style="width: 14%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_Cash"  <?PHP if ($Initial_Deposit_Cash==1) echo "checked"  ; ?> type="checkbox" value="1" id="Efectivo">style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Efectivo </span>
                     </td>
                     <td style="width: 14%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_Non_Securities"  <?PHP if ($Initial_Deposit_Non_Securities==1) echo "checked"  ; ?> type="checkbox" value="1" id="Títulos-Valores"style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Títulos Valores </span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_Both" <?PHP if ($Initial_Deposit_Both==1) echo "checked"  ; ?> type="checkbox" value="1" id="Ambos" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Ambos </span>
                     </td>
                     <td style="width: 10%; padding-top: 10px">Efectivo:</td>
-                    <td style="width: 15%" class="table2-row1">
+                    <td style="width: 15%" name="Initial_Deposit_USD_Amount" value="<?PHP echo $Initial_Deposit_USD_Amount ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                     <td style="width: 15%; padding-top: 10px">Títulos Valores:</td>
-                    <td style="width: 15%" class="table2-row1">
+                    <td style="width: 15%" name="Initial_Deposit_Securities_Amount" value="<?PHP echo $Initial_Deposit_Securities_Amount ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
@@ -580,39 +586,39 @@ ob_start();
             <table style="margin-left: -5px !important;">
                 <tr>
                     <td style="width: 2%; padding-top: 10px">1-</td>
-                    <td style="width: 48%" class="table2-row1">
+                    <td style="width: 48%" name="Initial_Deposit_From1"  type="text" value="<?PHP echo $Initial_Deposit_From1 ; ?>" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_From1_Cash"  type="checkbox" value="1" <?PHP if ($Initial_Deposit_From1_Cash==1) echo "checked"  ; ?>   id="Efectivo" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Efectivo </span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_From1_Securities" type="checkbox" value="1"  <?PHP if ($Initial_Deposit_From1_Securities==1) echo "checked"  ; ?>    id="Títulos" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Títulos </span>
                     </td>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="Initial_Deposit_From1_Rel"   type="text" value="<?PHP echo $Initial_Deposit_From1_Rel; ?>" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 2%; padding-top: 10px">2-</td>
-                    <td style="width: 48%" class="table2-row1">
+                    <td style="width: 48%" name="Initial_Deposit_From2" type="text"  value="<?PHP echo $Initial_Deposit_From2 ; ?>" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_From2_Cash"  type="checkbox" value="1"  <?PHP if ($Initial_Deposit_From2_Cash==1) echo "checked" ; ?>   id="Efectivo3" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Efectivo </span>
                     </td>
                     <td style="width: 10%" class="table2-row1">
                         <span class="checkbox-up-span"></span>
-                        <input type="checkbox" style="vertical-align: middle;">
+                        <input name="Initial_Deposit_From2_Securities"   type="checkbox" value="1"  <?PHP if ($Initial_Deposit_From2_Securities==1) echo "checked"  ; ?>   id="Títulos3" style="vertical-align: middle;">
                         <span class="checkbox-below-span"> Títulos </span>
                     </td>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="Initial_Deposit_From2_Rel" type="text"  value="<?PHP echo $Initial_Deposit_From2_Rel; ?>" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
@@ -673,11 +679,11 @@ ob_start();
                 <td style="width: 80%; padding-top: 10px">¿Es Ud. Una Persona Políticamente Expuesta (PEP)?</td>
                 <td style="width: 10%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input type="checkbox" name="PEP" <?PHP if ($PEP==1) echo "checked"  ; ?> type="radio" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td style="width: 10%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="PEP" <?PHP if ($PEP==0) echo "checked"  ; ?> type="checkbox" value="0" id="Salario" style="vertical-align: middle;">
                 </td>
             </tr>
             <tr>
@@ -686,11 +692,11 @@ ob_start();
                 </td>
                 <td style="width: 10%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="PEP_Close" <?PHP if ($PEP_Close==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td style="width: 10%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="PEP_Close" <?PHP if ($PEP_Close==0) echo "checked" ; ?> type="checkbox" value="0" id="Salario"  style="vertical-align: middle;">
                 </td>
             </tr>
             <tr class="row-background-style">
@@ -699,11 +705,11 @@ ob_start();
                 </td>
                 <td style="width: 10%;" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="PEP_Five" <?PHP if ($PEP_Five==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td style="width: 10%" class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="PEP_Five" <?PHP if ($PEP_Five==0) echo "checked"  ; ?> type="checkbox" value="0" id="Salario" style="vertical-align: middle;">
                 </td>
             </tr>
         </table>
@@ -721,23 +727,23 @@ ob_start();
                 <td style="padding-top: 10px">Personas autorizadas para instruir órdenes</td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Autorise_Owner" <?PHP if ($Orders_Autorise_Owner==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Autorise_Co_Owner" <?PHP if ($Orders_Autorise_Co_Owner==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Autorise_Signatory" <?PHP if ($Orders_Autorise_Signatory==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Autorise_Attorney" <?PHP if ($Orders_Autorise_Attorney==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Autorise_Beneficiary_Shareholder" <?PHP if ($Orders_Autorise_Beneficiary_Shareholder==1) echo "checked" ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
             </tr>
             <tr>
@@ -745,23 +751,23 @@ ob_start();
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Send_receive_cash_Autorise_Owner" <?PHP if ($Send_receive_cash_Autorise_Owner==1) echo "checked"   ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Send_receive_cash_Autorise_Co_Owner" <?PHP if ($Send_receive_cash_Autorise_Co_Owner==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Send_receive_cash__Autorise_Signatory" <?PHP if ($Send_receive_cash__Autorise_Signatory==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Send_receive_cash_Autorise_Attorney" <?PHP if ($Send_receive_cash_Autorise_Attorney==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Send_receive_cash__Beneficiary_Shareholder" <?PHP if ($Send_receive_cash__Beneficiary_Shareholder==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
             </tr>
         </table>
@@ -779,27 +785,28 @@ ob_start();
                 <td style="padding-top: 10px">Las órdenes podrán ser colocadas por</td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Mail"  type="checkbox" value="1"  <?PHP if ($Orders_Mail==1) echo "checked"  ; ?> id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Documents" <?PHP if ($Orders_Documents==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Telephone" <?PHP if ($Orders_Telephone==1) echo "checked"  ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input tname="Orders_text" <?PHP if ($Orders_text==1) echo "checked" ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_Directly" <?PHP if ($Orders_Directly==1)  echo "checked"; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="vertical-align: middle;">
+                    <input name="Orders_All_Above" <?PHP if ((($Orders_Mail==1) and ($Orders_Documents==1)) and
+                                        ((($Orders_Telephone==1) and ($Orders_text==1))  and ($Orders_Directly==1)))  echo "checked"; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle;">
                 </td>
             </tr>
         </table>
@@ -812,7 +819,7 @@ ob_start();
                 <td style="width: 20%">
                 <span class="checkbox-up-span" style="display: inline-block; padding-bottom: -10px;
                         position: relative;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Autorise_Give_instuctions" <?PHP if ($Autorise_Give_instuctions==1) echo "checked" ; ?> type="checkbox" value="1" id="no-discrecional" style="vertical-align: middle; display: inline-block;
                        padding-bottom: -10px; position: relative;">
                     <span class="checkbox-below-span" style="display: inline-block; padding-bottom: -10px;
                         ">Sí</span>
@@ -826,7 +833,7 @@ ob_start();
                 <td style="width: 20%">
                     <span class="checkbox-up-span" style="display: inline-block; margin-top: -10px;
                         position: relative; top: -10px;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Autorise_Give_instuctions" <?PHP if ($Autorise_Give_instuctions==0) echo "checked" ; ?> type="checkbox" value="0" id="si" style="vertical-align: middle; display: inline-block;
                         margin-top: -10px; position: relative; top: -10px;">
                     <span class="checkbox-below-span" style="display: inline-block; margin-top: -10px; padding-bottom: -10px;
                         position: relative; top: -10px;">No</span>
@@ -834,25 +841,25 @@ ob_start();
                 <td style="width: 10%;  font-style: italic;">
                     <span class="checkbox-up-span" style="display: inline-block; margin-top: -10px;
                         position: relative; top: -10px;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Complete1" <?PHP if ($Complete1==1) echo "checked" ; ?> type="checkbox" value="1" id="Ahorro" style="vertical-align: middle; display: inline-block;
                         margin-top: -10px; position: relative; top: -10px;">
                 </td>
                 <td style="width: 10%;  font-style: italic;">
                     <span class="checkbox-up-span" style="display: inline-block; margin-top: -10px;
                         position: relative; top: -10px;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Complete2" <?PHP if ($Complete2==1) echo "checked" ; ?> type="checkbox" value="1" id="Pensión" style="vertical-align: middle; display: inline-block;
                         margin-top: -10px; position: relative; top: -10px;">
                 </td>
                 <td style="width: 10%;  font-style: italic;">
                     <span class="checkbox-up-span" style="display: inline-block; margin-top: -10px;
                         position: relative; top: -10px;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Complete3" <?PHP if ($Complete3==1) echo "checked" ; ?> type="checkbox" value="1" id="Salario" style="vertical-align: middle; display: inline-block;
                         margin-top: -10px; position: relative; top: -10px;">
                 </td>
                 <td style="width: 30%;  font-style: italic;">
                     <span class="checkbox-up-span" style="display: inline-block; margin-top: -10px;
                         position: relative; top: -10px;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Complete4" <?PHP if ($Complete4==1) echo "checked" ; ?> type="checkbox" value="1" id="Salario1" style="vertical-align: middle; display: inline-block;
                         margin-top: -10px; position: relative; top: -10px;">
                 </td>
             </tr>
@@ -870,11 +877,11 @@ ob_start();
                 <td width="80%" style="position: relative; margin-top: -20px"></td>
                 <td class="table2-row1" style="position: relative; margin-top: -20px">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="position: relative; margin-top: -20px; vertical-align: middle;">
+                    <input name="Autorise_Firmus" <?PHP if ($Autorise_Firmus==1) echo "checked" ; ?> type="checkbox" value="1" id="Si" style="position: relative; margin-top: -20px; vertical-align: middle;">
                 </td>
                 <td class="table2-row1">
                     <span class="checkbox-up-span"></span>
-                    <input type="checkbox" style="position: relative; margin-top: -20px; vertical-align: middle;">
+                    <input name="Autorise_Firmus" <?PHP if ($Autorise_Firmus==1) echo "checked" ; ?> type="checkbox" value="1" id="No" style="position: relative; margin-top: -20px; vertical-align: middle;">
                 </td>
             </tr>
         </table>
@@ -886,7 +893,7 @@ ob_start();
                 <td style="width: 10%">
                 <span class="checkbox-up-span" style="display: inline-block; padding-bottom: -10px;
                         position: relative;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Receive_AS_Mail" <?PHP if ($Receive_AS_Mail==1) echo "checked" ; ?> type="checkbox" value="1" id="Ahorro" style="vertical-align: middle; display: inline-block;
                        padding-bottom: -10px; position: relative; margin-top: 7px">
                     <span class="checkbox-below-span" style="display: inline-block; padding-bottom: -10px;
                         margin-top: 7px">Correo</span>
@@ -894,7 +901,7 @@ ob_start();
                 <td style="width: 40%">
                 <span class="checkbox-up-span" style="display: inline-block; padding-bottom: -10px;
                         position: relative;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Receive_AS_Postal" <?PHP if ($Receive_AS_Postal==1) echo "checked" ; ?> type="checkbox" value="1" id="Pensión" style="vertical-align: middle; display: inline-block;
                        padding-bottom: -10px; position: relative; margin-top: 7px">
                     <span class="checkbox-below-span" style="display: inline-block; padding-bottom: -10px;
                         margin-top: 7px">Apartado Postal </span>
@@ -908,7 +915,7 @@ ob_start();
                 <td style="width: 10%">
                 <span class="checkbox-up-span" style="display: inline-block; padding-bottom: -10px;
                         position: relative;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Receive_Mensual" <?PHP if ($Receive_Mensual==1) echo "checked" ; ?> type="checkbox" value="1" id="Mensual" style="vertical-align: middle; display: inline-block;
                        padding-bottom: -10px; position: relative; margin-top: 7px">
                     <span class="checkbox-below-span" style="display: inline-block; padding-bottom: -10px;
                         margin-top: 7px">Mensual</span>
@@ -916,7 +923,7 @@ ob_start();
                 <td style="width: 10%">
                 <span class="checkbox-up-span" style="display: inline-block; padding-bottom: -10px;
                         position: relative;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Receive_Trimestral" <?PHP if ($Receive_Trimestral==1) echo "checked" ; ?> type="checkbox" value="1" id="Trimestral" style="vertical-align: middle; display: inline-block;
                        padding-bottom: -10px; position: relative; margin-top: 7px">
                     <span class="checkbox-below-span" style="display: inline-block; padding-bottom: -10px;
                         margin-top: 7px">Trimestral</span>
@@ -924,7 +931,7 @@ ob_start();
                 <td style="width: 10%">
                 <span class="checkbox-up-span" style="display: inline-block; padding-bottom: -10px;
                         position: relative;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Receive_Semestral" <?PHP if ($Receive_Semestral==1) echo "checked" ; ?> type="checkbox" value="1" id="Semestral" style="vertical-align: middle; display: inline-block;
                        padding-bottom: -10px; position: relative; margin-top: 7px">
                     <span class="checkbox-below-span" style="display: inline-block; padding-bottom: -10px;
                         margin-top: 7px">Semestral</span>
@@ -932,7 +939,7 @@ ob_start();
                 <td style="width: 30%">
                 <span class="checkbox-up-span" style="display: inline-block; padding-bottom: -10px;
                         position: relative;"></span>
-                    <input type="checkbox" style="vertical-align: middle; display: inline-block;
+                    <input name="Receive_Anual" <?PHP if ($Receive_Anual==1) echo "checked" ; ?> type="checkbox" value="1" id="Anual" style="vertical-align: middle; display: inline-block;
                        padding-bottom: -10px; position: relative; margin-top: 7px">
                     <span class="checkbox-below-span" style="display: inline-block; padding-bottom: -10px;
                         margin-top: 7px">Anual</span>
@@ -944,7 +951,7 @@ ob_start();
                 <td style="padding-top: 10px; width: 50%">Firmus-Octogone Inc. tomará como correo autorizado el declarado en
                     Datos Generales, de ser diferente suministrar el mismo:
                 </td>
-                <td class="table2-row1" style="width: 50%">
+                <td class="table2-row1" name="General_Data" value="<?PHP echo $General_Data ; ?>" type="text" style="width: 50%">
                     <span class="below-span" style="margin-top: 8px; position: relative; "></span>
                 </td>
             </tr>
@@ -1010,14 +1017,14 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
                     <td class="form-section-first-row-td" style="width: 10%">Tipo de Firma:</td>
                     <td class="form-section-first-row-td" style="width: 10%">
                         <span class="checkbox-up-span" style="position: relative; margin-bottom: 10px"></span>
-                        <input type="checkbox" style="vertical-align: middle;
+                        <input name="Signature1_Permanent" <?PHP if ($Signature1_Permanent==1) echo "checked" ; ?> type="checkbox" value="1" id="fijo" style="vertical-align: middle;
                     position: relative; top: -1px; margin-top: -1px">
                         <span class="checkbox-below-span" style=" position: relative;
                     top: -2px; margin-top: -2px">Conjunta</span>
                     </td>
                     <td class="form-section-first-row-td" style="width: 80%">
                         <span class="checkbox-up-span" style="position: relative; margin-bottom: 10px"></span>
-                        <input type="checkbox" style="vertical-align: middle;
+                        <input name="Signature1_Not_variable"  <?PHP if ($Signature1_Not_variable==1) echo "checked" ; ?> type="checkbox" value="1" id="Variable" style="vertical-align: middle;
                     position: relative; top: -1px; margin-top: -1px">
                         <span class="checkbox-below-span" style=" position: relative;
                     top: -2px; margin-top: -2px">Indistinta</span>
@@ -1026,12 +1033,12 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
-                    <td style="width: 45%" class="table2-row1">
+                    <td style="width: 45%" name="Full_name1" value="<?PHP echo $Full_name1 ; ?>" type="text" class="table2-row1">
                         <label>Nombre completo (en imprenta):</label>
                         <span class="below-span"></span>
                     </td>
                     <td width="10%"></td>
-                    <td style="width: 45%" class="table2-row1">
+                    <td style="width: 45%" name="Full_name2" value="<?PHP echo $Full_name2 ; ?>" type="text" class="table2-row1">
                         <label>Nombre completo (en imprenta):</label>
                         <span class="below-span"></span>
                     </td>
@@ -1040,13 +1047,13 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
             <table>
                 <tr>
                     <td style="width: 15%; padding-top: 10px">No. de Documento (ID):</td>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="Document1_ID"  value="<?PHP echo $Document1_ID ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                     <td width="10%"></td>
                     <
                     <td style="width: 15%; padding-top: 10px">No. de Documento (ID):</td>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="Document2_ID" value="<?PHP echo $Document2_ID ; ?>" type="text" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
@@ -1055,13 +1062,13 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
                 <tr>
                     <td width="25%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" class="table2-row1">
+                    <td style="width: 15%" name="Signature1_Date" value="<?PHP echo $Signature1_Date ; ?>" type="text" id="datepicker2" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                     <td width="10%"></td>
                     <td width="25%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" class="table2-row1">
+                    <td style="width: 15%" name="Signature2_Date" value="<?PHP echo $Signature2_Date ; ?>" type="text" id="datepicker3" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
@@ -1082,17 +1089,17 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
             <div class="form-subheader" style="margin-top: 15px">Firma (s) Cliente (s</div>
             <table style="margin-left: -5px !important; margin-top: 15px">
                 <tr>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="Runners_Name" value="<?PHP echo $Runners_Name ; ?>" type="text" class="table2-row1">
                         <label>Nombre del Corredor:</label>
                         <span class="below-span"></span>
                     </td>
                     <td width="5%"></td>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="Compliance_Officer_Name" value="<?PHP echo $Compliance_Officer_Name ; ?>" type="text" class="table2-row1">
                         <label>Nombre del Oficial de Cumplimiento:</label>
                         <span class="below-span"></span>
                     </td>
                     <td width="5%"></td>
-                    <td style="width: 30%" class="table2-row1">
+                    <td style="width: 30%" name="Chief_Executive_Name" value="<?PHP echo $Chief_Executive_Name ; ?>" type="text" class="table2-row1">
                         <label>Nombre del Ejecutivo Principal:</label>
                         <span class="below-span"></span>
                     </td>
@@ -1102,19 +1109,19 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
                 <tr>
                     <td width="10%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" class="table2-row1">
+                    <td style="width: 15%" name="Runners_Date"  value="<?PHP echo $Runners_Date ; ?>" type="text" id="datepicker4" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                     <td width="5%"></td>
                     <td width="15%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" class="table2-row1">
+                    <td style="width: 15%" name="Compliance__Officer_Date" value="<?PHP echo $Compliance__Officer_Date ; ?>" id="datepicker5" type="text" class="form-control" class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                     <td width="5%"></td>
                     <td width="15%"></td>
                     <td style="width: 5%; padding-top: 10px">Fecha:</td>
-                    <td style="width: 15%" class="table2-row1">
+                    <td style="width: 15%" name="Chief_Executive_Date" value="<?PHP echo $Chief_Executive_Date ; ?>" type="text" id="datepicker6"  class="table2-row1">
                         <span class="below-span"></span>
                     </td>
                 </tr>
@@ -1164,6 +1171,7 @@ $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
             </table>
         </div>
     </div>
+    </form>
     </body>
     </html>
 
@@ -1182,3 +1190,73 @@ $dompdf->render();
 // Output the generated PDF to Browser
 $dompdf->stream("dynamic_data.pdf", array("Attachment" => 1));
 ?>
+ <script>
+// Event callbacks
+const handleInput = ({target}) => {
+  if (!target.value.length) { return target.value = null; }
+  
+  const inputLength = target.value.length;
+  let currentIndex = Number(target.dataset.numberCodeInput);
+  
+  if (inputLength > 1) {
+    const inputValues = target.value.split('');
+    
+    inputValues.forEach((value, valueIndex) => {
+      const nextValueIndex = currentIndex + valueIndex;
+      
+      if (nextValueIndex >= numberCodeInputs.length) { return; }
+      
+      numberCodeInputs[nextValueIndex].value = value;
+    });
+    
+    currentIndex += inputValues.length - 2;
+  }
+ 
+  const nextIndex = currentIndex + 1;
+  
+  if(nextIndex < numberCodeInputs.length) {
+    numberCodeInputs[nextIndex].focus();
+  }
+}
+
+const handleKeyDown = e => {
+  const {code, target} = e;
+  
+  const currentIndex = Number(target.dataset.numberCodeInput);
+  const previousIndex = currentIndex - 1;
+  const nextIndex = currentIndex + 1;
+  
+  const hasPreviousIndex = previousIndex >= 0;
+  const hasNextIndex = nextIndex <= numberCodeInputs.length - 1
+  
+  switch(code) {
+    case 'ArrowLeft':
+    case 'ArrowUp':
+      if (hasPreviousIndex) {
+        numberCodeInputs[previousIndex].focus();
+      }
+      e.preventDefault();
+      break;
+      
+    case 'ArrowRight':
+    case 'ArrowDown':
+      if (hasNextIndex) {
+        numberCodeInputs[nextIndex].focus();
+      }
+      e.preventDefault();
+      break;
+    case 'Backspace':
+      if (!e.target.value.length && hasPreviousIndex) {
+        numberCodeInputs[previousIndex].value = null;
+        numberCodeInputs[previousIndex].focus();
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+// Event listeners
+numberCodeForm.addEventListener('input', handleInput);
+numberCodeForm.addEventListener('keydown', handleKeyDown);
+    </script>
