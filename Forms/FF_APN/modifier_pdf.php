@@ -44,8 +44,8 @@
 <!--<input class="active5" name="btn_pdf" value="Download as PDF File " type="button" onclick="window.location.href='pdf/generate_pdf.php?id=-->
 <!--        '">-->
 <input type="hidden" id="idInput" value="<?php echo $id; ?>">
-<input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="window.print();">
-<input class="active5 no-print" name="btn_pdf" value="Testing PDF File" type="button" onclick="openPDF();">
+<!--<input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="window.print();">-->
+<input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="openPDF();">
 <form name="form1" method="POST" action="modif.php">
 	<?PHP echo "<input type=hidden name=id value=$id>"; ?>
         <section class="wrapper">

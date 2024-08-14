@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e8a1973e-f1ad-48e0-a8b8-b723a20cfb0b" name="Changes" comment="set path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forms/FF_APN/pdf/apn_pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/FF_APN/pdf/apn_pdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forms/FF_APN/modifier_pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/FF_APN/modifier_pdf.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +175,7 @@
       <workItem from="1723582452364" duration="979000" />
       <workItem from="1723616824001" duration="37000" />
       <workItem from="1723635585813" duration="1221000" />
-      <workItem from="1723670346033" duration="1248000" />
+      <workItem from="1723670346033" duration="2081000" />
     </task>
     <task id="LOCAL-00001" summary="updated forms">
       <option name="closed" value="true" />
