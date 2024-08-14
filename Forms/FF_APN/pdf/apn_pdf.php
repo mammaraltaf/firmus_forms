@@ -166,9 +166,11 @@ $Runners_Date=datetofrench($Runners_Date);
 $Compliance__Officer_Date=datetofrench($Compliance__Officer_Date);
 $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
 
-
 // Capture the HTML content
-//ob_start();
+ob_start();
+?>
+<?php
+$base64='http://localhost/firmus_forms/Forms/images/logo.svg';
 ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -191,7 +193,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 margin-top: 50px;
             }
             .form-header {
-                background-color: #0072bc;
+                background-color: #358ccb;
                 color: white;
                 padding: 2px;
                 text-align: center;
@@ -200,7 +202,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
                 margin-top: 5px;
             }
             .form-subheader {
-                background-color: #2596be;
+                background-color: #8ab5e1;
                 color: white;
                 font-size: 12px;
                 padding: 1px 20px 1px 20px;
@@ -402,19 +404,19 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             </table>
             <table style="margin-left: -5px !important;">
                 <tr>
+                    <td style="width: 15%" class="table2-row1">
                         <label>Tipo de Documento (ID):</label>
-                    <td style="width: 20%" class="table2-row1">
-                    <span class="below-span" name="E_ID_type"><?PHP echo $E_ID_type ; ?></span>
+                        <span class="below-span" name="E_ID_type"><?PHP echo $E_ID_type ; ?></span>
                     </td>
-                    <td style="width: 20%" class="table2-row1">
+                    <td style="width: 17%" class="table2-row1">
                         <label>No. de Documento (ID):</label>
                         <span class="below-span" name ="E_ID_No"><?PHP echo $E_ID_No ; ?></span>
                     </td>
-                    <td style="width: 20%"  class="table2-row1">
+                    <td style="width: 18%"  class="table2-row1">
                         <label>Fecha de Vencimiento (ID):</label>
                         <span class="below-span" id="datepicker" name="E_ID_Expire_Date"><?PHP echo $E_ID_Expire_Date ; ?></span>
                     </td>
-                    <td style="width: 20%"  class="table2-row1">
+                    <td style="width: 15%"  class="table2-row1">
                         <label>Fecha de Nacimiento:</label>
                         <span class="below-span" name="E_Birth_Date" id="datepicker1"><?PHP echo $E_Birth_Date ; ?>"</span>
                     </td>
@@ -588,11 +590,11 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             </table>
             <table style="margin-left: -5px !important;">
                 <td style="width: 13%; padding-top: 5px">Salario Anual: (USD):</td>
-                <td style="width: 15%;">
+                <td style="width: 5%;">
                     <span class="below-span" name="RS_Annual_Salary_USD" style="margin-right: 4px"><?PHP echo $RS_Annual_Salary_USD ; ?></span>
                 </td>
                 <td style="width: 13%; padding-top: 5px">Años en la Empresa:</td>
-                <td style="width: 5%; margin-right: 3px">
+                <td style="width: 15%; margin-right: 3px">
                     <span class="below-span" name="RS_Years_in_Company"><?PHP echo $RS_Years_in_Company ; ?></span>
                 </td>
                 <td style="width: 10%; padding-top: 8px; padding-left: 30%">Actividad:</td>
@@ -784,7 +786,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             <div class="footer-content">
                 <p style="font-weight: bold">PH Times Square Center, Oficinas 17 D-E, Costa del Este, Av. Costa del Sol,
                     Ciudad de Panamá.</p>
-                <p style="font-weight: bold">Teléfono: + 507 310 0625 | WhatsApp Empresa : +507-6777-9766 |
+                <p style="font-weight: bold">Teléfono: + 507 310 0625 | 
                     www.firmus-financial.com</p>
                 <p>Entidad Regulada y Supervisada por la Superintendencia del Mercado de Valores de la República de Panamá
                     bajo Resolución No. 630-2014</p>
@@ -1134,7 +1136,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             <div class="footer-content">
                 <p style="font-weight: bold">PH Times Square Center, Oficinas 17 D-E, Costa del Este, Av. Costa del Sol,
                     Ciudad de Panamá.</p>
-                <p style="font-weight: bold">Teléfono: + 507 310 0625 | WhatsApp Empresa : +507-6777-9766 |
+                <p style="font-weight: bold">Teléfono: + 507 310 0625 | 
                     www.firmus-financial.com</p>
                 <p>Entidad Regulada y Supervisada por la Superintendencia del Mercado de Valores de la República de Panamá
                     bajo Resolución No. 630-2014</p>
@@ -1300,7 +1302,7 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
             <div class="footer-content">
                 <p style="font-weight: bold">PH Times Square Center, Oficinas 17 D-E, Costa del Este, Av. Costa del Sol,
                     Ciudad de Panamá.</p>
-                <p style="font-weight: bold">Teléfono: + 507 310 0625 | WhatsApp Empresa : +507-6777-9766 |
+                <p style="font-weight: bold">Teléfono: + 507 310 0625 | 
                     www.firmus-financial.com</p>
                 <p>Entidad Regulada y Supervisada por la Superintendencia del Mercado de Valores de la República de Panamá
                     bajo Resolución No. 630-2014</p>
@@ -1322,20 +1324,20 @@ $Chief_Executive_Date=datetofrench($Chief_Executive_Date);
     </html>
 
 <?php
-//$html = ob_get_clean();
-//
-//// Load HTML to Dompdf
-//$dompdf->loadHtml($html);
-//
-//// (Optional) Setup the paper size and orientation
-//$dompdf->setPaper('A4', 'portrait');
-//
-//// Render the HTML as PDF
-//$dompdf->render();
-//
-//// Output the generated PDF to Browser
-//$dompdf->stream("dynamic_data.pdf", array("Attachment" => 1));
-//?>
+$html = ob_get_clean();
+
+// Load HTML to Dompdf
+$dompdf->loadHtml($html);
+
+// (Optional) Setup the paper size and orientation
+$dompdf->setPaper('A4', 'portrait');
+
+// Render the HTML as PDF
+$dompdf->render();
+
+// Output the generated PDF to Browser
+$dompdf->stream("dynamic_data.pdf", array("Attachment" => 1));
+?>
  <script>
 // Event callbacks
 const handleInput = ({target}) => {

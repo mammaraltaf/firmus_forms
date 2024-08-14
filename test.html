@@ -1,93 +1,137 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Formulario de Apertura de Cuenta - Persona Natural</title>
-<style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    table { width: 100%; border-collapse: collapse; }
-    th, td { border: 1px solid black; padding: 8px; text-align: left; }
-    th { background-color: #f2f2f2; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form W-8BEN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #000;
+        }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-section h2 {
+            font-size: 14px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-section input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+        }
+        .form-section textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-footer input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .signature-section div {
+            width: 48%;
+        }
+    </style>
 </head>
 <body>
-<h2>Formulario Apertura de Cuenta Persona Natural</h2>
+    <div class="container">
+        <h1>Form W-8BEN</h1>
+        <p>Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)</p>
+        <p><strong>Department of the Treasury</strong> Internal Revenue Service</p>
+        
+        <div class="form-section">
+            <h2>Part I Identification of Beneficial Owner</h2>
+            <label for="name">1. Name of individual who is the beneficial owner</label>
+            <input type="text" id="name" name="name">
 
-<table>
-    <!-- Datos Generales -->
-    <tr><th colspan="4">Datos Generales</th></tr>
-    <tr>
-        <td colspan="2">Origen de Fondos:</td>
-        <td colspan="2">Tipo de Cuenta o Contrato: [Discrecional / No Discrecional]</td>
-    </tr>
-    <tr>
-        <td>Envía su Efectivo:</td>
-        <td>Recibe su Efectivo:</td>
-        <td>Envía sus Títulos:</td>
-        <td>Recibe sus Títulos:</td>
-    </tr>
+            <label for="country">2. Country of citizenship</label>
+            <input type="text" id="country" name="country">
 
-    <!-- Fuente de los Recursos o Patrimonio -->
-    <tr><th colspan="4">Fuente de los Recursos o Patrimonio</th></tr>
-    <tr>
-        <td>Nombre del Empleador / Independiente:</td>
-        <td>Años en la Empresa:</td>
-        <td>Salario Anual (USD):</td>
-        <td>Ingreso Anual (USD):</td>
-    </tr>
-    <tr>
-        <td>Actividad:</td>
-        <td colspan="3">[Ahorro / Pensión / Salario / Honorarios Profesionales / Negocio Propio]</td>
-    </tr>
+            <label for="address">3. Permanent residence address</label>
+            <input type="text" id="address" name="address">
 
-    <!-- Información Personal -->
-    <tr><th colspan="4">Información Personal</th></tr>
-    <tr>
-        <td>Nombre(s):</td>
-        <td>Apellido(s):</td>
-        <td>Nacionalidad:</td>
-        <td>Estado Civil:</td>
-    </tr>
-    <tr>
-        <td>Profesión u Oficio:</td>
-        <td>Ocupación Actual:</td>
-        <td>Correo Electrónico:</td>
-        <td>Dirección Postal:</td>
-    </tr>
-    
-    <!-- Referencia Bancaria -->
-    <tr><th colspan="4">Referencia Bancaria</th></tr>
-    <tr>
-        <td>Nombre de la Institución:</td>
-        <td>País:</td>
-        <td>Persona Contacto:</td>
-        <td>Teléfono:</td>
-    </tr>
+            <label for="mailing_address">4. Mailing address (if different from above)</label>
+            <input type="text" id="mailing_address" name="mailing_address">
 
-    <!-- Persona Políticamente Expuesta -->
-    <tr><th colspan="4">Persona Políticamente Expuesta</th></tr>
-    <tr>
-        <td colspan="4">
-            ¿Es Ud. Una Persona Políticamente Expuesta (PEP)? [Sí / No]
-            <br>
-            ¿Es Ud. Familiar Cercano de PEP? [Sí / No]
-            <br>
-            ¿Declara que en los últimos 5 años se considera como PEP? [Sí / No]
-        </td>
-    </tr>
+            <label for="us_taxpayer_id">5. U.S. taxpayer identification number (SSN or ITIN)</label>
+            <input type="text" id="us_taxpayer_id" name="us_taxpayer_id">
 
-    <!-- Firma y Declaración -->
-    <tr><th colspan="4">Firma y Declaración</th></tr>
-    <tr>
-        <td colspan="4">Confirmo (Confirmamos) que he (hemos) comprendido los términos del acuerdo de cuenta de inversión.</td>
-    </tr>
-    <tr>
-        <td>Firma del Cliente:</td>
-        <td>Firma del Personal de la Casa de Valores:</td>
-        <td>Firma del Oficial de Cumplimiento:</td>
-        <td>Firma del Ejecutivo Principal:</td>
-    </tr>
-</table>
+            <label for="foreign_tax_id">6a. Foreign tax identifying number</label>
+            <input type="text" id="foreign_tax_id" name="foreign_tax_id">
+            <input type="checkbox" id="ftin_not_required" name="ftin_not_required">
+            <label for="ftin_not_required">6b. Check if FTIN not legally required</label>
 
+            <label for="reference_number">7. Reference number(s)</label>
+            <input type="text" id="reference_number" name="reference_number">
+
+            <label for="dob">8. Date of birth (MM-DD-YYYY)</label>
+            <input type="text" id="dob" name="dob">
+        </div>
+
+        <div class="form-section">
+            <h2>Part II Claim of Tax Treaty Benefits</h2>
+            <label for="country_of_residence">9. I certify that the beneficial owner is a resident of</label>
+            <input type="text" id="country_of_residence" name="country_of_residence">
+            <p>within the meaning of the income tax treaty between the United States and that country.</p>
+
+            <label for="special_rates">10. Special rates and conditions (if applicable)</label>
+            <textarea id="special_rates" name="special_rates"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Part III Certification</h2>
+            <p>Under penalties of perjury, I declare that I have examined the information on this form and to the best of my knowledge and belief it is true, correct, and complete...</p>
+
+            <div class="signature-section">
+                <div>
+                    <label for="signature">Signature of beneficial owner</label>
+                    <input type="text" id="signature" name="signature">
+                </div>
+                <div>
+                    <label for="date">Date (MM-DD-YYYY)</label>
+                    <input type="text" id="date" name="date">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
 </body>
 </html>
