@@ -1,21 +1,59 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../favicon.png" rel="shortcut icon" type="image/x-icon"/>
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../favicon.png" rel="shortcut icon" type="image/x-icon" />
     <title>Firmus Financial Inc.</title>
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
-    <!-- script -->
-    <script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="../js/jquery-ui.js" type="text/javascript"></script>
-    <script src="../js/jquery.ui.datepicker-fr.js" type="text/javascript"></script>
+	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link  href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<!-- script -->
+	<script src="../js/jquery-1.10.2.js" type="text/javascript"></script> 
+	<script src="../js/jquery-ui.js" type="text/javascript"></script>
+	<script src="../js/jquery.ui.datepicker-fr.js" type="text/javascript"></script>
+<script type ="text/javascript">
+$(document).ready(function() {
+// Datepicker Popups calender to Choose date.
+    $(function() {
+        $("#datepicker").datepicker();
+        $("#datepicker1").datepicker();
+		$("#datepicker2").datepicker();
+		$("#datepicker3").datepicker();
+		$("#datepicker4").datepicker();
+		$("#datepicker5").datepicker();
+		$("#datepicker6").datepicker();
+// Pass the user selected date format.
+        $("#format").change(function() {
+            $("#datepicker").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker1").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker2").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker3").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker4").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker5").datepicker("option", "dateFormat", $(this).val());
+			$("#datepicker6").datepicker("option", "dateFormat", $(this).val());
+        });
+    });
+});
+</script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.dataTables.js" type="text/javascript"></script>
+     
+        <script type="text/javascript">
+            
+                $(document).ready(function() {
+                        $('#example').dataTable( {
+                                "language": {
+								  "url": "../js/French.json"
+                               }
+                          } );
+                          } );
+						  
+	</script>
 </head>
 <body>
-<form name="beneficialOwnerForm" method="POST" action="ajout.php">
+<form name="form1" method="POST" action="ajout.php">
         <section class="wrapper">
             <div class="pdf-type-subtext">
                 <p><b>Form W-8BEN - Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)</b></p>
