@@ -37,7 +37,6 @@
 
           </style>
       </head>
-      <input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="window.print();">
       <?PHP
 error_reporting(0);
 include "../dbclass.php";
@@ -76,6 +75,9 @@ $certification_date=datetofrench($certification_date);
 <body>
       <form name="form1" method="POST" action="modif.php">
           <?PHP echo "<input type=hidden name=id value=$id>"; ?>
+          <input type="hidden" id="idInput" value="<?php echo $id; ?>">
+          <!--<input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="window.print();">-->
+          <input class="active5 no-print" name="btn_pdf" value="Download as PDF File" type="button" onclick="openPDF();">
     <section class="wrapper">
         <div class="pdf-type-subtext">
             <p><b>Form W-8BEN - Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)</b></p>
@@ -197,4 +199,13 @@ $certification_date=datetofrench($certification_date);
           <p>Entidad Regulada y Supervisada por la Superintendencia del Mercado de Valores de la República de Panamá bajo Resolución No. 630-2014</p>
       </div>
       </body>
-    </html></html>
+    </html>
+<script>
+    // Elements
+    const numberCodeForm = document.querySelector('[data-number-code-form]');
+    const numberCodeInputs = [...numberCodeForm.querySelectorAll('[data-number-code-input]')];
+    function openPDF() {
+        var id = document.getElementById('idInput').value; // or any way you get the id
+        window.open(`../FF_W8_BEN/pdf/w8_ben_pdf.php?id=${id}`, '_blank');
+    }
+</script>
