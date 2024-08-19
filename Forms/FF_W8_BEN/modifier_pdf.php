@@ -140,7 +140,8 @@ $certification_date=datetofrench($certification_date);
                 </tr>
                 <tr>
                     <td><p>Date of birth (MM-DD-YYYY):</p></td>
-                    <td><input name="date_of_birth" type="date" class="form-control"></td>
+                    <td>
+                        <input name="date_of_birth" value= "<?php echo $date_of_birth; ?>"  type="text" class="form-control" id="datepicker" placeholder="DD/MM/AAAA.." required>
                 </tr>
             </table>
         </div>
@@ -176,7 +177,9 @@ $certification_date=datetofrench($certification_date);
                 </tr>
                 <tr>
                     <td><p>Certification Date (MM-DD-YYYY):</p></td>
-                    <td><input name="certification_date" value= "<?php echo $certification_date; ?>"  type="date" class="form-control"></td>
+                    <td>
+                        <input name="certification_date" value= "<?php echo $certification_date; ?>"  type="text" class="form-control" id="datepicker1" placeholder="DD/MM/AAAA.." required>
+                    </td>
                 </tr>
             </table>
         </div>
