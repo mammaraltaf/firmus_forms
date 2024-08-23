@@ -148,6 +148,7 @@ $certification_date=datetofrench($certification_date);
             </table>
         </div>
 
+        
 
         <!-- Part II: Claim of Tax Treaty Benefits -->
         <div class="fields-block-wrapper bg-gray">
