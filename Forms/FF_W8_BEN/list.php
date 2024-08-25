@@ -18,7 +18,7 @@ include "../dbclass.php";
 $db = new database('');
 $db->connect();
 
-$db->query("SELECT * FROM  FOR_FF_W8_BEN order by id");
+$db->query("SELECT * FROM FOR_FF_W8_BEN order by id");
 echo "<table id='accountsTable' class='table table-striped table-bordered'>";
     echo "<thead>
                     <tr>
@@ -36,7 +36,7 @@ echo "<table id='accountsTable' class='table table-striped table-bordered'>";
 while( $data = $db->fetch_array() )
 {
 $id=$data['id'];
-$beneficial_owner_name =$data['beneficial_owner_name '];
+$beneficial_owner_name =$data['beneficial_owner_name'];
 $country_of_citizenship=$data['country_of_citizenship'];
 $reference_numbers=$data['reference_numbers'];
 
