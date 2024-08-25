@@ -1,195 +1,223 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="../css/style.css" rel="stylesheet">
-	<link href="../favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../favicon.png" rel="shortcut icon" type="image/x-icon"/>
     <title>Firmus Financial Inc.</title>
 
-	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link  href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<!-- script -->
-	<script src="../js/jquery-1.10.2.js" type="text/javascript"></script> 
-	<script src="../js/jquery-ui.js" type="text/javascript"></script>
-	<script src="../js/jquery.ui.datepicker-fr.js" type="text/javascript"></script>
-<script type ="text/javascript">
-$(document).ready(function() {
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <!-- script -->
+    <script src="../js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.js" type="text/javascript"></script>
+    <script src="../js/jquery.ui.datepicker-fr.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
 // Datepicker Popups calender to Choose date.
-    $(function() {
-        $("#datepicker").datepicker();
-        $("#datepicker1").datepicker();
+            $(function () {
+                $("#datepicker").datepicker();
+                $("#datepicker1").datepicker();
 // Pass the user selected date format.
-        $("#format").change(function() {
-            $("#datepicker").datepicker("option", "dateFormat", $(this).val());
-			$("#datepicker1").datepicker("option", "dateFormat", $(this).val());
+                $("#format").change(function () {
+                    $("#datepicker").datepicker("option", "dateFormat", $(this).val());
+                    $("#datepicker1").datepicker("option", "dateFormat", $(this).val());
+                });
+            });
         });
-    });
-});
-</script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/jquery.dataTables.js" type="text/javascript"></script>
-     
-        <script type="text/javascript">
-            
-                $(document).ready(function() {
-                        $('#example').dataTable( {
-                                "language": {
-								  "url": "../js/French.json"
-                               }
-                          } );
-                          } );
-						  
-	</script>
+    </script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.dataTables.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#example').dataTable({
+                "language": {
+                    "url": "../js/French.json"
+                }
+            });
+        });
+
+    </script>
 </head>
 <body>
 <form name="form1" method="POST" action="ajout.php">
-        <section class="wrapper">
-            <div class="pdf-type-subtext">
-                <p><b>Form W-8BEN - Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)</b></p>
-            </div>
+    <section class="wrapper">
+        <div class="pdf-type-subtext">
+            <p><b>Form W-8BEN - Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and
+                Reporting (Individuals)</b></p>
+        </div>
 
-            <!-- Part I: Identification of Beneficial Owner -->
-            <div class="fields-block-wrapper">
-                <h3>Part I: Identification of Beneficial Owner</h3>
+        <!-- Part I: Identification of Beneficial Owner -->
+        <div class="fields-block-wrapper">
+            <h3>Part I: Identification of Beneficial Owner</h3>
 
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Name of individual who is the beneficial owner:</p>
-                        <input name="beneficial_owner_name" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Country of citizenship:</p>
-                        <input name="country_of_citizenship" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Permanent residence address (street, apt. or suite no., or rural route):</p>
-                        <input name="permanent_residence_address" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>City or town, state or province (include postal code where appropriate):</p>
-                        <input name="permanent_residence_city_state_province" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Country:</p>
-                        <input name="permanent_residence_country" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Mailing address (if different from above):</p>
-                        <input name="mailing_address" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>City or town, state or province (include postal code where appropriate):</p>
-                        <input name="mailing_address_city_state_province" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Country:</p>
-                        <input name="mailing_address_country" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>U.S. taxpayer identification number (SSN or ITIN), if required:</p>
-                        <input name="us_taxpayer_identification_number" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Foreign tax identifying number:</p>
-                        <input name="foreign_tax_identifying_number" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="checkbox-block">
-                    <input type="checkbox" name="ftin_not_legally_required" id="ftin_not_legally_required" value="1">
-                    <label for="ftin_not_legally_required">Check if FTIN not legally required</label>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Reference number(s):</p>
-                        <input name="reference_numbers" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Date of birth (MM-DD-YYYY):</p>
-                        <input name="date_of_birth" type="text" class="form-control" id="datepicker" placeholder="DD/MM/AAAA.." required>
-                    </div>
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Name of individual who is the beneficial owner:</p>
+                    <input name="beneficial_owner_name" type="text" class="form-control">
                 </div>
             </div>
 
-            <!-- Part II: Claim of Tax Treaty Benefits -->
-            <div class="fields-block-wrapper bg-gray">
-                <h3>Part II: Claim of Tax Treaty Benefits</h3>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>I certify that the beneficial owner is a resident of:</p>
-                        <input name="treaty_country_residence" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>The beneficial owner is claiming the provisions of Article and paragraph:</p>
-                        <input name="special_rates_conditions" type="text" class="form-control">
-                    </div>
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Country of citizenship:</p>
+                    <input name="country_of_citizenship" type="text" class="form-control">
                 </div>
             </div>
 
-            <!-- Part III: Certification -->
-            <div class="fields-block-wrapper">
-                <h3>Part III: Certification</h3>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Signer Name:</p>
-                        <input name="signer_name" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Certification Signature:</p>
-                        <input name="certification_signature" type="text" class="form-control">
-                    </div>
-                </div>
-
-                <div class="single-field">
-                    <div class="horizontal-form-field">
-                        <p>Certification Date (MM-DD-YYYY):</p>
-                        <input name="certification_date" type="text" class="form-control" id="datepicker1" placeholder="DD/MM/AAAA.." required>
-                    </div>
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Permanent residence address (street, apt. or suite no., or rural route):</p>
+                    <input name="permanent_residence_address" type="text" class="form-control">
                 </div>
             </div>
 
-            <center><input class="active5" name="btn_submit" value="Save Data" type="submit"></center>
-        </section>
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>City or town, state or province (include postal code where appropriate):</p>
+                    <input name="permanent_residence_city_state_province" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Country:</p>
+                    <input name="permanent_residence_country" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Mailing address (if different from above):</p>
+                    <input name="mailing_address" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>City or town, state or province (include postal code where appropriate):</p>
+                    <input name="mailing_address_city_state_province" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Country:</p>
+                    <input name="mailing_address_country" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>U.S. taxpayer identification number (SSN or ITIN), if required:</p>
+                    <input name="us_taxpayer_identification_number" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Foreign tax identifying number:</p>
+                    <input name="foreign_tax_identifying_number" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="checkbox-block">
+                <input type="checkbox" name="ftin_not_legally_required" id="ftin_not_legally_required" value="1">
+                <label for="ftin_not_legally_required">Check if FTIN not legally required</label>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Reference number(s):</p>
+                    <input name="reference_numbers" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <p>Date of birth (MM-DD-YYYY):</p>
+                    <input name="date_of_birth" type="text" class="form-control" id="datepicker"
+                           placeholder="DD/MM/AAAA.." required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part II: Claim of Tax Treaty Benefits -->
+        <div class="fields-block-wrapper">
+            <h3>Part II: Claim of Tax Treaty Benefits (for chapter 3 purposes only) (see instructions)</h3>
+        </div>
+        <div style="font-family: Arial, sans-serif; margin: 20px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 5%; font-weight: bold; padding: 10px 5px;">9</td>
+                    <td style="padding: 10px;">
+                        <span style="font-weight: bold;">I certify that the beneficial owner is a resident of</span>
+                        <input type="text" name="claim_of_tax_1"
+                               style="border: none; border-bottom: 1px solid #000; width: 200px; margin-left: 5px;"/>
+                        <span>within the meaning of the income tax treaty between the United States and that country.</span>
+                        <!--                            <input type="text" style="border: none; border-bottom: 1px solid #000; width: 50px; margin-left: 5px; margin-right: 50px;" />-->
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 5%; font-weight: bold; padding: 10px 5px;">10</td>
+                    <td style="padding: 10px;">
+                        <span style="font-weight: bold;">Special rates and conditions</span> (if applicable—see
+                        instructions):
+                        The beneficial owner is claiming the provisions of Article and paragraph
+                        <input type="text" name="claim_of_tax_2"
+                               style="border: none; border-bottom: 1px solid #000; width: 50px; margin-left: 5px; margin-right: 5px;"/>
+                        <span>of the treaty identified on line 9 above to claim a</span>
+                        <input type="text" name="claim_of_tax_3"
+                               style="border: none; border-bottom: 1px solid #000; width: 50px; margin-left: 5px;"/>
+                        <span>% rate of withholding on (specify type of income):</span>
+                        <input type="text" name="claim_of_tax_4"
+                               style="border: none; border-bottom: 1px solid #000; width: 100%; margin-top: 10px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 10px;">
+                        <span style="font-weight: bold;">Explain the additional conditions in the Article and paragraph the beneficial owner meets to be eligible for the rate of withholding:</span>
+                        <input type="text" name="claim_of_tax_5"
+                               style="border: none; border-bottom: 1px solid #000; width: 100%; margin-top: 10px;"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!-- Part III: Certification -->
+        <div class="fields-block-wrapper">
+            <h3>Part III: Certification</h3>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <input type="checkbox" name="accept_certification" value="1">
+                    <span>I certify that I have the capacity to sign for the person identified on line 1 of this form</span>
+                </div>
+            </div>
+            <br>
+            <div class="single-field signature flex-33">
+                <div class="signature-block"></div>
+                <p>Signature of beneficial owner (or individual authorized to sign for beneficial owner)</p>
+            </div>
+        </div>
+
+        <div class="single-field">
+            <div class="horizontal-form-field">
+                <p>Signer Name:</p>
+                <input name="signer_name" type="text" class="form-control">
+                <p>Certification Date (MM-DD-YYYY):</p>
+                <input name="certification_date" type="text" class="form-control" id="datepicker1"
+                       placeholder="DD/MM/AAAA.." required>
+            </div>
+        </div>
+        <br>
+
+        <center><input class="active5" name="btn_submit" value="Save Data" type="submit"></center>
+    </section>
 </form>
 <br>
 <br>

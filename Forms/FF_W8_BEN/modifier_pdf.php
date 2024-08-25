@@ -60,12 +60,17 @@ $foreign_tax_identifying_number=$data['foreign_tax_identifying_number'];
 $ftin_not_legally_required=$data['ftin_not_legally_required'];
 $reference_numbers=$data['reference_numbers'];
 $date_of_birth=$data['date_of_birth'];
+$claim_of_tax_1=$data['claim_of_tax_1'];
+$claim_of_tax_2=$data['claim_of_tax_2'];
+$claim_of_tax_3=$data['claim_of_tax_3'];
+$claim_of_tax_4=$data['claim_of_tax_4'];
+$claim_of_tax_5=$data['claim_of_tax_5'];
 $treaty_country_residence=$data['treaty_country_residence'];
 $special_rates_conditions=$data['special_rates_conditions'];
 $certification_signature=$data['certification_signature'];
 $certification_date=$data['certification_date'];
 $signer_name=$data['signer_name'];
-
+$accept_certification = $data['accept_certification'];
 };
 //------Change Dates from YYYY-MM-DD to DD/MM/YYYY format 
 $date_of_birth=datetofrench($date_of_birth);
@@ -151,45 +156,79 @@ $certification_date=datetofrench($certification_date);
         
 
         <!-- Part II: Claim of Tax Treaty Benefits -->
-        <div class="fields-block-wrapper bg-gray">
-            <h3>Part II: Claim of Tax Treaty Benefits</h3>
-
-            <table class="form-table">
-                <tr>
-                    <td><p>I certify that the beneficial owner is a resident of:</p></td>
-                    <td><input name="treaty_country_residence" value= "<?php echo $treaty_country_residence; ?>"  type="text" class="form-control"></td>
-                </tr>
-                <tr>
-                    <td><p>The beneficial owner is claiming the provisions of Article and paragraph:</p></td>
-                    <td><input name="special_rates_conditions" value= "<?php echo $special_rates_conditions; ?>" type="text" class="form-control"></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- Part III: Certification -->
         <div class="fields-block-wrapper">
-            <h3>Part III: Certification</h3>
+            <h3>Part II: Claim of Tax Treaty Benefits (for chapter 3 purposes only) (see instructions)</h3>
+        </div>
+        <div style="font-family: Arial, sans-serif; margin: 20px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 5%; font-weight: bold; padding: 10px 5px;">9</td>
+                    <td style="padding: 10px;">
+                        <span style="font-weight: bold;">I certify that the beneficial owner is a resident of</span>
+                        <input type="text" name="claim_of_tax_1" value="<?PHP echo $claim_of_tax_1 ?>"
+                               style="border: none; border-bottom: 1px solid #000; width: 200px; margin-left: 5px;"/>
+                        <span>within the meaning of the income tax treaty between the United States and that country.</span>
 
-            <table class="form-table">
-                <tr>
-                    <td><p>Signer Name:</p></td>
-                    <td><input name="signer_name" value= "<?php echo $signer_name; ?>"  type="text" class="form-control"></td>
+                        <!--                            <input type="text" style="border: none; border-bottom: 1px solid #000; width: 50px; margin-left: 5px; margin-right: 50px;" />-->
+                    </td>
                 </tr>
                 <tr>
-                    <td><p>Certification Signature:</p></td>
-                    <td><input name="certification_signature" value= "<?php echo $certification_signature; ?>"  type="text" class="form-control"></td>
+                    <td style="width: 5%; font-weight: bold; padding: 10px 5px;">10</td>
+                    <td style="padding: 10px;">
+                        <span style="font-weight: bold;">Special rates and conditions</span> (if applicable—see
+                        instructions):
+                        The beneficial owner is claiming the provisions of Article and paragraph
+                        <input type="text" name="claim_of_tax_3" value="<?PHP echo $claim_of_tax_2 ?>"
+                               style="border: none; border-bottom: 1px solid #000; width: 50px; margin-left: 5px; margin-right: 5px;"/>
+                        <span>of the treaty identified on line 9 above to claim a</span>
+                        <input type="text" name="claim_of_tax_4" value="<?PHP echo $claim_of_tax_3 ?>"
+                               style="border: none; border-bottom: 1px solid #000; width: 50px; margin-left: 5px;"/>
+                        <span>% rate of withholding on (specify type of income):</span>
+                        <input type="text" name="claim_of_tax_5" value="<?PHP echo $claim_of_tax_4 ?>"
+                               style="border: none; border-bottom: 1px solid #000; width: 100%; margin-top: 10px;"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td><p>Certification Date (MM-DD-YYYY):</p></td>
-                    <td>
-                        <input name="certification_date" value= "<?php echo $certification_date; ?>"  type="text" class="form-control" id="datepicker1" placeholder="DD/MM/AAAA.." required>
+                    <td colspan="2" style="padding: 10px;">
+                        <span style="font-weight: bold;">Explain the additional conditions in the Article and paragraph the beneficial owner meets to be eligible for the rate of withholding:</span>
+                        <input type="text" name="claim_of_tax_6" value="<?PHP echo $claim_of_tax_5 ?>"
+                               style="border: none; border-bottom: 1px solid #000; width: 100%; margin-top: 10px;"/>
                     </td>
                 </tr>
             </table>
         </div>
 
-        <center><input class="active5" name="btn_submit" value="Save Data" type="submit"></center>
+
+        <!-- Part III: Certification -->
+        <div class="fields-block-wrapper">
+            <h3>Part III: Certification</h3>
+
+            <div class="single-field">
+                <div class="horizontal-form-field">
+                    <input type="checkbox" name="accept_certification" value="1" <?PHP if ($accept_certification ==1) echo "checked" ; ?> />
+                    <span>I certify that I have the capacity to sign for the person identified on line 1 of this form</span>
+                </div>
+            </div>
+            <br>
+            <div class="single-field signature flex-33">
+                <div class="signature-block"></div>
+                <p>Signature of beneficial owner (or individual authorized to sign for beneficial owner)</p>
+            </div>
+        </div>
+
+        <div class="single-field">
+            <div class="horizontal-form-field">
+                <p>Signer Name:</p>
+                <input name="signer_name" type="text" class="form-control" value="<?PHP echo $signer_name ?>">
+                <p>Certification Date (MM-DD-YYYY):</p>
+                <input name="certification_date" type="text" class="form-control" id="datepicker1" value="<?PHP echo $certification_date?>"
+                       placeholder="DD/MM/AAAA.." required>
+            </div>
+        </div>
+
+<!--        <center><input class="active5" name="btn_submit" value="Save Data" type="submit"></center>-->
     </section>
+          <br>
 </form>
       <div class="border"></div>
       <div class="pdf-address">

@@ -33,10 +33,16 @@ $foreign_tax_identifying_number = getPostValue('foreign_tax_identifying_number')
 $ftin_not_legally_required = getIntegerValue('ftin_not_legally_required');
 $reference_numbers = getPostValue('reference_numbers');
 $date_of_birth = getPostDateValue('date_of_birth');
+$claim_of_tax_1 = getPostValue('claim_of_tax_1');
+$claim_of_tax_2 = getPostValue('claim_of_tax_2');
+$claim_of_tax_3 = getPostValue('claim_of_tax_3');
+$claim_of_tax_4 = getPostValue('claim_of_tax_4');
+$claim_of_tax_5 = getPostValue('claim_of_tax_5');
 $treaty_country_residence = getPostValue('treaty_country_residence');
 $special_rates_conditions = getPostValue('special_rates_conditions');
 $certification_signature = getPostValue('certification_signature');
 $certification_date = getPostDateValue('certification_date');
+$accept_certification = getPostValue('accept_certification');
 $signer_name = getPostValue('signer_name');
 
 //$query_new = "INSERT INTO for_ff_w8_ben (beneficial_owner_name, country_of_citizenship, permanent_residence_address, permanent_residence_city_state_province, permanent_residence_country, mailing_address, mailing_address_city_state_province, mailing_address_country, us_taxpayer_identification_number, foreign_tax_identifying_number, ftin_not_legally_required, reference_numbers, date_of_birth, treaty_country_residence, special_rates_conditions, certification_signature, certification_date, signer_name) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -58,10 +64,16 @@ INSERT INTO for_ff_w8_ben (
     ftin_not_legally_required,
     reference_numbers,
     date_of_birth,
+    claim_of_tax_1,
+    claim_of_tax_2,
+    claim_of_tax_3,
+    claim_of_tax_4,
+    claim_of_tax_5,
     treaty_country_residence,
     special_rates_conditions,
     certification_signature,
     certification_date,
+    accept_certification,                           
     signer_name
 ) VALUES (
     $beneficial_owner_name,
@@ -77,10 +89,16 @@ INSERT INTO for_ff_w8_ben (
     $ftin_not_legally_required,
     $reference_numbers,
     $date_of_birth,
+    $claim_of_tax_1,
+    $claim_of_tax_2,
+    $claim_of_tax_3,
+    $claim_of_tax_4,
+    $claim_of_tax_5,
     $treaty_country_residence,
     $special_rates_conditions,
     $certification_signature,
     $certification_date,
+    $accept_certification,
     $signer_name
 )";
 
